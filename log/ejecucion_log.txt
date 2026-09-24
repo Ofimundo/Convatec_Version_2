@@ -1,0 +1,899 @@
+2026-04-02 16:07:18 - Proceso iniciado - 
+2026-04-02 16:07:18 -  - -> Se procesa el archivo FAC_283_test.pdf
+2026-04-02 16:07:39 - analisis_ocr - Ocurrió un error: list index out of range
+2026-04-02 16:07:39 - Proceso finalizado - 
+2026-04-02 16:55:31 - Proceso iniciado - 
+2026-04-02 16:55:31 -  - -> Se procesa el archivo FAC_283_test.pdf
+2026-04-02 16:55:50 - analisis_ocr - Ocurrió un error: [WinError 183] No se puede crear un archivo que ya existe: 'doc_procesados\\FAC_283_test\\FAC_283_test_1.pdf' -> 'doc_procesados\\FAC_283_test\\97283.pdf'
+2026-04-02 16:55:50 -  - -> Se procesa el archivo GD__ 14107_test.pdf
+2026-04-02 16:56:05 - analisis_ocr - Ocurrió un error: list index out of range
+2026-04-02 16:56:05 - Proceso finalizado - 
+2026-04-02 16:59:01 - Proceso iniciado - 
+2026-04-02 16:59:01 -  - -> Se procesa el archivo FAC_283_test.pdf
+2026-04-02 16:59:23 - analisis_ocr - Ocurrió un error: [WinError 183] No se puede crear un archivo que ya existe: 'doc_procesados\\FAC_283_test\\FAC_283_test_1.pdf' -> 'doc_procesados\\FAC_283_test\\97283.pdf'
+2026-04-02 16:59:23 -  - -> Se procesa el archivo GD__ 14107_test.pdf
+2026-04-02 16:59:44 - analisis_ocr - Ocurrió un error: [WinError 183] No se puede crear un archivo que ya existe: 'doc_procesados\\GD___14107_test\\GD___14107_test_1.pdf' -> 'doc_procesados\\GD___14107_test\\14107.pdf'
+2026-04-02 16:59:44 -  - -> Se procesa el archivo GD_°_ 14072.pdf
+2026-04-02 17:00:13 - analisis_ocr - Ocurrió un error: list index out of range
+2026-04-02 17:00:13 - Proceso finalizado - 
+2026-04-06 12:04:29 - Proceso iniciado - 
+2026-04-06 12:04:29 -  - -> Se procesa el archivo FAC_'434.pdf
+2026-04-06 12:04:54 - analisis_ocr - Ocurrió un error: list index out of range
+2026-04-06 12:04:54 -  - -> Se procesa el archivo FAC_283_test.pdf
+2026-04-06 12:05:16 - analisis_ocr - Ocurrió un error: [WinError 183] No se puede crear un archivo que ya existe: 'doc_procesados\\FAC_283_test\\FAC_283_test_1.pdf' -> 'doc_procesados\\FAC_283_test\\97283.pdf'
+2026-04-06 12:05:16 -  - -> Se procesa el archivo GD__ 14107_test.pdf
+2026-04-06 12:05:37 - analisis_ocr - Ocurrió un error: [WinError 183] No se puede crear un archivo que ya existe: 'doc_procesados\\GD___14107_test\\GD___14107_test_1.pdf' -> 'doc_procesados\\GD___14107_test\\14107.pdf'
+2026-04-06 12:05:37 -  - -> Se procesa el archivo GD_°_ 14072.pdf
+2026-04-06 12:06:06 - analisis_ocr - Ocurrió un error: [WinError 183] No se puede crear un archivo que ya existe: 'doc_procesados\\GD___14072\\GD___14072_1.pdf' -> 'doc_procesados\\GD___14072\\14072.pdf'
+2026-04-06 12:06:06 - Proceso finalizado - 
+2026-04-06 12:38:42 - main - Proceso iniciado
+2026-04-06 12:38:42 - main - Iniciando procesamiento de documentos...
+2026-04-06 12:38:42 -  - -> Se procesa el archivo FAC_'434.pdf
+2026-04-06 12:39:03 - analisis_ocr - Folio extraído: 97434
+2026-04-06 12:39:04 - subir_archivo_xml - XML guardado: FACTURA ELECTRONICA_61.608.102-0_97434.xml
+2026-04-06 12:39:04 - subir_archivo - Error: [Errno 2] No such file or directory: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento/97434.pdf'
+2026-04-06 12:39:04 - limpieza_procesados - PDF movido: 97283.pdf
+2026-04-06 12:39:04 - limpieza_procesados - PDF movido: FAC_283_test.pdf
+2026-04-06 12:39:04 - limpieza_procesados - Error general: [WinError 5] Acceso denegado: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\doc_procesados\\FAC_283_test'
+2026-04-06 12:39:04 - procesar_documentos_pendientes - Eliminado de pendientes: FAC_'434.pdf
+2026-04-06 12:39:04 - main - Error durante el procesamiento: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\FAC_434.pdf'
+2026-04-06 12:39:13 - main - Proceso iniciado
+2026-04-06 12:39:13 - main - Iniciando procesamiento de documentos...
+2026-04-06 12:39:13 -  - -> Se procesa el archivo FAC_283_test.pdf
+2026-04-06 12:39:36 - analisis_ocr - Folio extraído: 97283
+2026-04-06 12:39:37 - subir_archivo_xml - XML guardado: FACTURA ELECTRONICA_77.776.555-8_97283.xml
+2026-04-06 12:39:37 - subir_archivo - Error: [Errno 2] No such file or directory: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento/97283.pdf'
+2026-04-06 12:39:37 - limpieza_procesados - Error general: [WinError 5] Acceso denegado: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\doc_procesados\\FAC_283_test'
+2026-04-06 12:39:37 - procesar_documentos_pendientes - Eliminado de pendientes: FAC_283_test.pdf
+2026-04-06 12:39:37 - main - Error durante el procesamiento: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\FAC_283_test.pdf'
+2026-04-06 12:42:00 - main - Proceso iniciado
+2026-04-06 12:42:00 - main - Documentos encontrados en doc_pendientes: 4
+2026-04-06 12:42:00 - main - Iniciando procesamiento de 4 documentos...
+2026-04-06 12:42:00 -  - -> Se procesa el archivo FAC_!283.pdf
+2026-04-06 12:42:23 - analisis_ocr - Folio extraído: 97283
+2026-04-06 12:42:24 - subir_archivo_xml - XML guardado: FACTURA ELECTRONICA_77.776.555-8_97283.xml
+2026-04-06 12:42:24 - subir_archivo - Error: [Errno 2] No such file or directory: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento/97283.pdf'
+2026-04-06 12:42:24 - limpieza_procesados - Limpieza de carpeta procesados completada
+2026-04-06 12:42:24 - procesar_documentos_pendientes - Eliminado de pendientes: FAC_!283.pdf
+2026-04-06 12:42:24 - main - Error durante el procesamiento: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\FAC_283.pdf'
+2026-04-06 12:45:45 - main - Proceso iniciado
+2026-04-06 12:45:45 - main - Documentos encontrados en doc_pendientes: 3
+2026-04-06 12:45:45 - main - Proceso marcado como TRUE
+2026-04-06 12:45:45 - main - Iniciando procesamiento de 3 documentos...
+2026-04-06 12:45:45 - procesar_documentos_pendientes - Total de PDFs encontrados: 3
+2026-04-06 12:45:45 - procesar_documentos_pendientes - Procesando (1/3): FAC_'434.pdf
+2026-04-06 12:46:01 - analisis_ocr - Folio extraído: 97434
+2026-04-06 12:46:02 - subir_archivo_xml - XML guardado: FACTURA ELECTRONICA_61.608.102-0_97434.xml
+2026-04-06 12:46:02 - subir_archivo - Error: [Errno 2] No such file or directory: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento/97434.pdf'
+2026-04-06 12:46:02 - analizar_documento - Error eliminando carpeta: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\FAC_434.pdf'
+2026-04-06 12:46:02 - procesar_documentos_pendientes - Eliminado de pendientes: FAC_'434.pdf
+2026-04-06 12:46:02 - procesar_documentos_pendientes - Error limpiando temporal: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\FAC_434.pdf'
+2026-04-06 12:46:02 - procesar_documentos_pendientes - Procesando (2/3): GD__ 14107_test.pdf
+2026-04-06 12:46:23 - analisis_ocr - Folio extraído: 14107
+2026-04-06 12:46:24 - subir_archivo_xml - XML guardado: GUIA DE DESPACHO
+ELECTRONICA_61.606.001-5_14107.xml
+2026-04-06 12:46:24 - subir_archivo - Error: [Errno 2] No such file or directory: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento/14107.pdf'
+2026-04-06 12:46:24 - analizar_documento - Error eliminando carpeta: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\FAC_434.pdf'
+2026-04-06 12:46:24 - procesar_documentos_pendientes - Eliminado de pendientes: GD__ 14107_test.pdf
+2026-04-06 12:46:24 - procesar_documentos_pendientes - Error limpiando temporal: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\FAC_434.pdf'
+2026-04-06 12:46:24 - procesar_documentos_pendientes - Procesando (3/3): GD_°_ 14072.pdf
+2026-04-06 12:46:53 - analisis_ocr - Folio extraído: 14072
+2026-04-06 12:46:54 - subir_archivo_xml - XML guardado: GUIA DE DESPACHO
+ELECTRONICA_61.602.232-6_14072.xml
+2026-04-06 12:46:54 - subir_archivo - Error: [Errno 2] No such file or directory: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento/14072.pdf'
+2026-04-06 12:46:54 - analizar_documento - Error eliminando carpeta: [WinError 5] Acceso denegado: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento'
+2026-04-06 12:46:54 - procesar_documentos_pendientes - Eliminado de pendientes: GD_°_ 14072.pdf
+2026-04-06 12:46:54 - procesar_documentos_pendientes - Error limpiando temporal: [WinError 5] Acceso denegado: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento'
+2026-04-06 12:46:54 - limpieza_procesados - Limpieza de carpeta procesados completada
+2026-04-06 12:46:54 - limpiar_pendientes - Carpeta doc_pendientes limpiada
+2026-04-06 12:46:54 - procesar_documentos_pendientes - Procesamiento completado. Total procesados: 3
+2026-04-06 12:46:54 - main - Limpiando archivos temporales...
+2026-04-06 12:46:54 - limpiar_procesados - Limpieza de carpeta procesados completada
+2026-04-06 12:46:54 - main - Documentos procesados exitosamente: 0
+2026-04-06 12:46:54 - main - Proceso finalizado exitosamente
+2026-04-06 12:46:54 - main - Proceso marcado como FALSE
+2026-04-06 12:51:55 - main - Proceso iniciado
+2026-04-06 12:51:55 - main - Documentos encontrados en doc_pendientes: 2
+2026-04-06 12:51:55 - main - Proceso marcado como TRUE
+2026-04-06 12:51:55 - main - Iniciando procesamiento de 2 documentos...
+2026-04-06 12:51:55 - procesar_documentos_pendientes - Total de PDFs encontrados: 2
+2026-04-06 12:51:55 - procesar_documentos_pendientes - Procesando (1/2): FAC_!283.pdf
+2026-04-06 12:52:17 - analisis_ocr - Folio extraído: 97283
+2026-04-06 12:52:18 - analisis_ocr - JSON guardado: 97283.json
+2026-04-06 12:52:18 - subir_archivo_xml - XML guardado: FACTURA ELECTRONICA_77.776.555-8_97283.xml
+2026-04-06 12:52:18 - subir_archivo - Error: [Errno 2] No such file or directory: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento/97283.pdf'
+2026-04-06 12:52:18 - analizar_documento - Error eliminando carpeta: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\FAC_283.pdf'
+2026-04-06 12:52:18 - procesar_documentos_pendientes - Eliminado de pendientes: FAC_!283.pdf
+2026-04-06 12:52:18 - procesar_documentos_pendientes - Error limpiando temporal: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\FAC_283.pdf'
+2026-04-06 12:52:18 - procesar_documentos_pendientes - Procesando (2/2): FAC_'434.pdf
+2026-04-06 12:52:39 - analisis_ocr - Folio extraído: 97434
+2026-04-06 12:52:40 - analisis_ocr - JSON guardado: 97434.json
+2026-04-06 12:52:40 - subir_archivo_xml - XML guardado: FACTURA ELECTRONICA_61.608.102-0_97434.xml
+2026-04-06 12:52:40 - subir_archivo - Error: [Errno 2] No such file or directory: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento/97434.pdf'
+2026-04-06 12:52:40 - analizar_documento - Error eliminando carpeta: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\FAC_283.pdf'
+2026-04-06 12:52:40 - procesar_documentos_pendientes - Eliminado de pendientes: FAC_'434.pdf
+2026-04-06 12:52:40 - procesar_documentos_pendientes - Error limpiando temporal: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\FAC_283.pdf'
+2026-04-06 12:52:40 - limpieza_procesados - Limpieza de carpeta procesados completada
+2026-04-06 12:52:40 - procesar_documentos_pendientes - Procesamiento completado. Total procesados: 2
+2026-04-06 12:52:40 - main - Limpiando archivos temporales...
+2026-04-06 12:52:40 - limpiar_procesados - Limpieza de carpeta procesados completada
+2026-04-06 12:52:40 - main - Proceso finalizado exitosamente
+2026-04-06 12:52:40 - main - Proceso marcado como FALSE
+2026-04-06 12:57:47 - main - Proceso iniciado
+2026-04-06 12:57:47 - main - Documentos encontrados en doc_pendientes: 1
+2026-04-06 12:57:47 - main - Proceso marcado como TRUE
+2026-04-06 12:57:47 - main - Iniciando procesamiento de 1 documentos...
+2026-04-06 12:57:47 - procesar_documentos_pendientes - Total de PDFs encontrados: 1
+2026-04-06 12:57:47 - procesar_documentos_pendientes - Procesando (1/1): FAC_'434.pdf
+2026-04-06 12:58:05 - analisis_ocr - Folio extraído: 97434
+2026-04-06 12:58:05 - analisis_ocr - JSON guardado: 97434.json
+2026-04-06 12:58:05 - analisis_ocr - PDF guardado en: C:\Users\marrano\OneDrive - Ofimundo\Escritorio\Proyectos\CONVATEC\ocr-prod\doc_procesados\97434/97434.pdf
+2026-04-06 12:58:05 - subir_archivo_xml - XML guardado: FACTURA ELECTRONICA_61.608.102-0_97434.xml
+2026-04-06 12:58:05 - subir_archivo - Error: [Errno 2] No such file or directory: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento/97434.pdf'
+2026-04-06 12:58:05 - analizar_documento - Error eliminando carpeta: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\FAC_434.pdf'
+2026-04-06 12:58:05 - procesar_documentos_pendientes - Eliminado de pendientes: FAC_'434.pdf
+2026-04-06 12:58:05 - procesar_documentos_pendientes - Error limpiando temporal: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\FAC_434.pdf'
+2026-04-06 12:58:05 - limpieza_procesados - Limpieza de carpeta procesados completada
+2026-04-06 12:58:05 - procesar_documentos_pendientes - Procesamiento completado. Total procesados: 1
+2026-04-06 12:58:05 - main - Limpiando archivos temporales...
+2026-04-06 12:58:05 - limpiar_procesados - Limpieza de carpeta procesados completada
+2026-04-06 12:58:05 - main - Proceso finalizado exitosamente
+2026-04-06 12:58:05 - main - Proceso marcado como FALSE
+2026-04-06 13:01:38 - main - ========== PROCESO INICIADO ==========
+2026-04-06 13:01:38 - main - Documentos encontrados en doc_pendientes: 1
+2026-04-06 13:01:38 - main - Proceso marcado como TRUE
+2026-04-06 13:01:38 - main - PASO 1 - Iniciando procesamiento OCR de 1 documentos...
+2026-04-06 13:01:38 - procesar_documentos_pendientes - Total de PDFs encontrados: 1
+2026-04-06 13:01:38 - procesar_documentos_pendientes - Procesando (1/1): FAC_!283.pdf
+2026-04-06 13:01:58 - analisis_ocr - Folio extraído: 97283
+2026-04-06 13:01:58 - analisis_ocr - JSON guardado: 97283.json
+2026-04-06 13:01:58 - analisis_ocr - PDF guardado en: C:\Users\marrano\OneDrive - Ofimundo\Escritorio\Proyectos\CONVATEC\ocr-prod\doc_procesados\97283/97283.pdf
+2026-04-06 13:01:58 - subir_archivo_xml - XML guardado: FACTURA ELECTRONICA_77.776.555-8_97283.xml
+2026-04-06 13:01:58 - subir_archivo - Error: [Errno 2] No such file or directory: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento/97283.pdf'
+2026-04-06 13:01:58 - analizar_documento - Error eliminando carpeta: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\FAC_283.pdf'
+2026-04-06 13:01:58 - procesar_documentos_pendientes - Eliminado de pendientes: FAC_!283.pdf
+2026-04-06 13:01:58 - procesar_documentos_pendientes - Error limpiando temporal: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\FAC_283.pdf'
+2026-04-06 13:01:58 - limpieza_procesados - Limpieza de carpeta procesados completada
+2026-04-06 13:01:58 - procesar_documentos_pendientes - Procesamiento completado. Total procesados: 1
+2026-04-06 13:01:58 - main - PASO 1 - OCR completado
+2026-04-06 13:01:58 - main - PASO 2 - Limpiando archivos temporales...
+2026-04-06 13:01:58 - limpiar_procesados - Limpieza de carpeta procesados completada
+2026-04-06 13:01:58 - main - PASO 2 - Limpieza completada
+2026-04-06 13:01:58 - main - PASO 3 - Convirtiendo JSON a XML...
+2026-04-06 13:01:58 - generar_xml - XML generado: xml\97283.xml
+2026-04-06 13:01:58 - procesar_jsons - ✅ Procesado: 97283.json -> xml\97283.xml
+2026-04-06 13:01:58 - procesar_jsons - Resumen: 1 procesados, 0 omitidos
+2026-04-06 13:01:58 - main - PASO 3 - Conversión completada
+2026-04-06 13:01:58 - main - PASO 4 - Limpiando JSONs procesados...
+2026-04-06 13:01:58 - limpiar_jsons - JSON eliminado (XML ya existe): 97283.json
+2026-04-06 13:01:58 - main - PASO 4 - Limpieza completada
+2026-04-06 13:01:58 - main - ========== PROCESO FINALIZADO EXITOSAMENTE ==========
+2026-04-06 13:01:58 - main - Proceso marcado como FALSE
+2026-04-06 13:13:59 - main - ========== PROCESO INICIADO ==========
+2026-04-06 13:13:59 - main - Documentos encontrados en doc_pendientes: 1
+2026-04-06 13:13:59 - main - Proceso marcado como TRUE
+2026-04-06 13:13:59 - main - PASO 1 - Iniciando procesamiento OCR de 1 documentos...
+2026-04-06 13:13:59 - procesar_documentos_pendientes - Total de PDFs encontrados: 1
+2026-04-06 13:13:59 - procesar_documentos_pendientes - Procesando (1/1): FAC_!283.pdf
+2026-04-06 13:14:17 - analisis_ocr - Folio extraído: 97283
+2026-04-06 13:14:17 - analisis_ocr - JSON guardado: 97283.json
+2026-04-06 13:14:17 - analisis_ocr - PDF guardado en: C:\Users\marrano\OneDrive - Ofimundo\Escritorio\Proyectos\CONVATEC\ocr-prod\doc_procesados\97283/97283.pdf
+2026-04-06 13:14:17 - subir_archivo_xml - XML guardado: FACTURA ELECTRONICA_77.776.555-8_97283.xml
+2026-04-06 13:14:17 - subir_archivo - Error: [Errno 2] No such file or directory: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento/97283.pdf'
+2026-04-06 13:14:17 - analizar_documento - Error eliminando carpeta: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\FAC_283.pdf'
+2026-04-06 13:14:17 - procesar_documentos_pendientes - Eliminado de pendientes: FAC_!283.pdf
+2026-04-06 13:14:17 - procesar_documentos_pendientes - Error limpiando temporal: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\FAC_283.pdf'
+2026-04-06 13:14:17 - limpieza_procesados - Limpieza de carpeta procesados completada
+2026-04-06 13:14:17 - procesar_documentos_pendientes - Procesamiento completado. Total procesados: 1
+2026-04-06 13:14:17 - main - PASO 1 - OCR completado
+2026-04-06 13:14:17 - main - PASO 2 - Limpiando archivos temporales...
+2026-04-06 13:14:17 - limpiar_procesados - Limpieza de carpeta procesados completada
+2026-04-06 13:14:17 - main - PASO 2 - Limpieza completada
+2026-04-06 13:14:17 - main - PASO 3 - Convirtiendo JSON a XML...
+2026-04-06 13:14:18 - generar_xml - XML generado: xml\97283.xml
+2026-04-06 13:14:18 - procesar_jsons - ✅ Procesado: 97283.json -> xml\97283.xml
+2026-04-06 13:14:18 - procesar_jsons - Resumen: 1 procesados, 0 omitidos
+2026-04-06 13:14:18 - main - PASO 3 - Conversión completada
+2026-04-06 13:14:18 - main - PASO 4 - Limpiando JSONs procesados...
+2026-04-06 13:14:18 - main - Error durante el procesamiento: name 'limpiar_json_procesados' is not defined
+2026-04-06 13:14:18 - main - Proceso marcado como FALSE
+2026-04-07 08:31:10 - main - ========== PROGRAMA INICIADO ==========
+2026-04-07 08:31:10 - main - Horario permitido: 8:00 - 19:00
+2026-04-07 08:31:10 - main - Intervalo de ejecución: cada 30 minutos
+2026-04-07 08:31:10 - main - Máximo reintentos por fallo: 3
+2026-04-07 08:31:10 - main - Última ejecución exitosa: Nunca
+2026-04-07 08:31:10 - main - Verificando documentos pendientes al iniciar...
+2026-04-07 08:31:10 - main - Ejecutando proceso inicial...
+2026-04-07 08:31:10 - ejecutor - Intento 1 de 3
+2026-04-07 08:31:10 - proceso_completo - ========== INICIANDO PROCESO ==========
+2026-04-07 08:31:10 - proceso_completo - Documentos a procesar: 1
+2026-04-07 08:31:10 - proceso_completo - PASO 1 - Procesando OCR...
+2026-04-07 08:31:10 - procesar_documentos_pendientes - Total de PDFs encontrados: 1
+2026-04-07 08:31:10 - procesar_documentos_pendientes - Procesando (1/1): GD_°_ 14072.pdf
+2026-04-07 08:31:35 - analisis_ocr - Folio extraído: 14072
+2026-04-07 08:31:36 - analisis_ocr - JSON guardado: 14072.json
+2026-04-07 08:31:36 - analisis_ocr - PDF guardado en: C:\Users\marrano\OneDrive - Ofimundo\Escritorio\Proyectos\CONVATEC\ocr-prod\doc_procesados\14072/14072.pdf
+2026-04-07 08:31:36 - subir_archivo_xml - XML guardado: GUIA DE DESPACHO
+ELECTRONICA_61.602.232-6_14072.xml
+2026-04-07 08:31:36 - subir_archivo - Error: [Errno 2] No such file or directory: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento/14072.pdf'
+2026-04-07 08:31:36 - analizar_documento - Error eliminando carpeta: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\GD___14072.pdf'
+2026-04-07 08:31:36 - procesar_documentos_pendientes - Eliminado de pendientes: GD_°_ 14072.pdf
+2026-04-07 08:31:36 - procesar_documentos_pendientes - Error limpiando temporal: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\GD___14072.pdf'
+2026-04-07 08:31:36 - limpieza_procesados - Limpieza de carpeta procesados completada
+2026-04-07 08:31:36 - procesar_documentos_pendientes - Procesamiento completado. Total procesados: 1
+2026-04-07 08:31:36 - proceso_completo - PASO 1 - OCR completado
+2026-04-07 08:31:36 - proceso_completo - PASO 2 - Limpiando archivos temporales...
+2026-04-07 08:31:36 - limpiar_procesados - Limpieza de carpeta procesados completada
+2026-04-07 08:31:36 - proceso_completo - PASO 2 - Limpieza completada
+2026-04-07 08:31:36 - proceso_completo - PASO 3 - Convirtiendo JSON a XML...
+2026-04-07 08:31:36 - generar_xml - XML generado: xml\14072.xml
+2026-04-07 08:31:36 - procesar_jsons - ✅ Procesado: 14072.json -> xml\14072.xml
+2026-04-07 08:31:36 - procesar_jsons - Omitiendo 97283.json - XML ya existe: 97283.xml
+2026-04-07 08:31:36 - procesar_jsons - Resumen: 1 procesados, 1 omitidos
+2026-04-07 08:31:36 - proceso_completo - PASO 3 - Conversión completada
+2026-04-07 08:31:36 - proceso_completo - PASO 4 - Limpiando JSONs procesados...
+2026-04-07 08:31:36 - limpiar_jsons - JSON eliminado (XML ya existe): 14072.json
+2026-04-07 08:31:36 - limpiar_jsons - JSON eliminado (XML ya existe): 97283.json
+2026-04-07 08:31:36 - proceso_completo - PASO 4 - Limpieza completada
+2026-04-07 08:31:36 - proceso_completo - ========== PROCESO COMPLETADO EXITOSAMENTE ==========
+2026-04-07 08:31:36 - ejecutor - Proceso completado exitosamente en intento 1
+2026-04-07 08:31:36 - main - Scheduler configurado. Próxima ejecución en 30 minutos
+2026-04-07 08:32:40 - main - Programa detenido por el usuario
+2026-04-07 08:32:40 - main - ========== PROGRAMA DETENIDO ==========
+2026-04-07 15:35:54 - main - ========== PROGRAMA INICIADO ==========
+2026-04-07 15:35:54 - main - Horario permitido: 8:00 - 19:00
+2026-04-07 15:35:54 - main - Intervalo de ejecución: cada 30 minutos
+2026-04-07 15:35:54 - main - Máximo reintentos por fallo: 3
+2026-04-07 15:35:54 - main - Última ejecución exitosa: 2026-04-07 08:31:36
+2026-04-07 15:35:54 - main - Verificando documentos pendientes al iniciar...
+2026-04-07 15:35:54 - main - Ejecutando proceso inicial...
+2026-04-07 15:35:54 - ejecutor - Intento 1 de 3
+2026-04-07 15:35:54 - proceso_completo - ========== INICIANDO PROCESO ==========
+2026-04-07 15:35:54 - proceso_completo - Documentos a procesar: 1
+2026-04-07 15:35:54 - proceso_completo - PASO 1 - Procesando OCR...
+2026-04-07 15:35:54 - procesar_documentos_pendientes - Total de PDFs encontrados: 1
+2026-04-07 15:35:54 - procesar_documentos_pendientes - Procesando (1/1): FAC_!283.pdf
+2026-04-07 15:36:14 - analisis_ocr - Folio extraído: 97283
+2026-04-07 15:36:15 - analisis_ocr - JSON guardado: 97283.json
+2026-04-07 15:36:15 - analisis_ocr - PDF guardado en: C:\Users\marrano\OneDrive - Ofimundo\Escritorio\Proyectos\CONVATEC\ocr-prod\doc_procesados\97283/97283.pdf
+2026-04-07 15:36:15 - subir_archivo_xml - XML guardado: FACTURA ELECTRONICA_77.776.555-8_97283.xml
+2026-04-07 15:36:15 - subir_archivo - Error: [Errno 2] No such file or directory: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento/97283.pdf'
+2026-04-07 15:36:15 - analizar_documento - Error eliminando carpeta: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\FAC_283.pdf'
+2026-04-07 15:36:15 - procesar_documentos_pendientes - Eliminado de pendientes: FAC_!283.pdf
+2026-04-07 15:36:15 - procesar_documentos_pendientes - Error limpiando temporal: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\FAC_283.pdf'
+2026-04-07 15:36:15 - limpieza_procesados - Limpieza de carpeta procesados completada
+2026-04-07 15:36:15 - procesar_documentos_pendientes - Procesamiento completado. Total procesados: 1
+2026-04-07 15:36:15 - proceso_completo - PASO 1 - OCR completado
+2026-04-07 15:36:15 - proceso_completo - PASO 2 - Limpiando archivos temporales...
+2026-04-07 15:36:15 - limpiar_procesados - Limpieza de carpeta procesados completada
+2026-04-07 15:36:15 - proceso_completo - PASO 2 - Limpieza completada
+2026-04-07 15:36:15 - proceso_completo - PASO 3 - Convirtiendo JSON a XML...
+2026-04-07 15:36:15 - procesar_jsons - Omitiendo 97283.json - XML ya existe: 97283.xml
+2026-04-07 15:36:15 - procesar_jsons - Resumen: 0 procesados, 1 omitidos
+2026-04-07 15:36:15 - proceso_completo - PASO 3 - Conversión completada
+2026-04-07 15:36:15 - proceso_completo - PASO 4 - Limpiando JSONs procesados...
+2026-04-07 15:36:15 - limpiar_jsons - JSON eliminado (XML ya existe): 97283.json
+2026-04-07 15:36:15 - proceso_completo - PASO 4 - Limpieza completada
+2026-04-07 15:36:15 - proceso_completo - ========== PROCESO COMPLETADO EXITOSAMENTE ==========
+2026-04-07 15:36:15 - ejecutor - Proceso completado exitosamente en intento 1
+2026-04-07 15:36:15 - main - Scheduler configurado. Próxima ejecución en 30 minutos
+2026-04-07 15:36:18 - main - Programa detenido por el usuario
+2026-04-07 15:36:18 - main - ========== PROGRAMA DETENIDO ==========
+2026-04-07 15:36:25 - main - ========== PROGRAMA INICIADO ==========
+2026-04-07 15:36:25 - main - Horario permitido: 8:00 - 19:00
+2026-04-07 15:36:25 - main - Intervalo de ejecución: cada 30 minutos
+2026-04-07 15:36:25 - main - Máximo reintentos por fallo: 3
+2026-04-07 15:36:25 - main - Última ejecución exitosa: 2026-04-07 15:36:15
+2026-04-07 15:36:25 - main - Verificando documentos pendientes al iniciar...
+2026-04-07 15:36:25 - main - Ejecutando proceso inicial...
+2026-04-07 15:36:25 - ejecutor - Intento 1 de 3
+2026-04-07 15:36:25 - proceso_completo - ========== INICIANDO PROCESO ==========
+2026-04-07 15:36:25 - proceso_completo - Documentos a procesar: 1
+2026-04-07 15:36:25 - proceso_completo - PASO 1 - Procesando OCR...
+2026-04-07 15:36:25 - procesar_documentos_pendientes - Total de PDFs encontrados: 1
+2026-04-07 15:36:25 - procesar_documentos_pendientes - Procesando (1/1): FAC_'4990.pdf
+2026-04-07 15:36:44 - analisis_ocr - Folio extraído: 94990
+2026-04-07 15:36:44 - analisis_ocr - JSON guardado: 94990.json
+2026-04-07 15:36:45 - analisis_ocr - PDF guardado en: C:\Users\marrano\OneDrive - Ofimundo\Escritorio\Proyectos\CONVATEC\ocr-prod\doc_procesados\94990/94990.pdf
+2026-04-07 15:36:45 - subir_archivo_xml - XML guardado: FACTURA ELECTRONICA_74.414.100-1_94990.xml
+2026-04-07 15:36:45 - subir_archivo - Error: [Errno 2] No such file or directory: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento/94990.pdf'
+2026-04-07 15:36:45 - analizar_documento - Error eliminando carpeta: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\FAC_4990.pdf'
+2026-04-07 15:36:45 - procesar_documentos_pendientes - Eliminado de pendientes: FAC_'4990.pdf
+2026-04-07 15:36:45 - procesar_documentos_pendientes - Error limpiando temporal: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\FAC_4990.pdf'
+2026-04-07 15:36:45 - limpieza_procesados - Limpieza de carpeta procesados completada
+2026-04-07 15:36:45 - procesar_documentos_pendientes - Procesamiento completado. Total procesados: 1
+2026-04-07 15:36:45 - proceso_completo - PASO 1 - OCR completado
+2026-04-07 15:36:45 - proceso_completo - PASO 2 - Limpiando archivos temporales...
+2026-04-07 15:36:45 - limpiar_procesados - Limpieza de carpeta procesados completada
+2026-04-07 15:36:45 - proceso_completo - PASO 2 - Limpieza completada
+2026-04-07 15:36:45 - proceso_completo - PASO 3 - Convirtiendo JSON a XML...
+2026-04-07 15:36:45 - generar_xml - XML generado: xml\94990.xml
+2026-04-07 15:36:45 - procesar_jsons - ✅ Procesado: 94990.json -> xml\94990.xml
+2026-04-07 15:36:45 - procesar_jsons - Resumen: 1 procesados, 0 omitidos
+2026-04-07 15:36:45 - proceso_completo - PASO 3 - Conversión completada
+2026-04-07 15:36:45 - proceso_completo - PASO 4 - Limpiando JSONs procesados...
+2026-04-07 15:36:45 - limpiar_jsons - JSON eliminado (XML ya existe): 94990.json
+2026-04-07 15:36:45 - proceso_completo - PASO 4 - Limpieza completada
+2026-04-07 15:36:45 - proceso_completo - ========== PROCESO COMPLETADO EXITOSAMENTE ==========
+2026-04-07 15:36:45 - ejecutor - Proceso completado exitosamente en intento 1
+2026-04-07 15:36:45 - main - Scheduler configurado. Próxima ejecución en 30 minutos
+2026-04-07 15:46:18 - main - Programa detenido por el usuario
+2026-04-07 15:46:18 - main - ========== PROGRAMA DETENIDO ==========
+2026-04-07 15:46:22 - main - ========== PROGRAMA INICIADO ==========
+2026-04-07 15:46:22 - main - Horario permitido: 8:00 - 19:00
+2026-04-07 15:46:22 - main - Intervalo de ejecución: cada 30 minutos
+2026-04-07 15:46:22 - main - Máximo reintentos por fallo: 3
+2026-04-07 15:46:22 - main - Última ejecución exitosa: 2026-04-07 15:36:45
+2026-04-07 15:46:22 - main - Verificando documentos pendientes al iniciar...
+2026-04-07 15:46:22 - main - Ejecutando proceso inicial...
+2026-04-07 15:46:22 - ejecutor - Intento 1 de 3
+2026-04-07 15:46:22 - proceso_completo - ========== INICIANDO PROCESO ==========
+2026-04-07 15:46:22 - proceso_completo - Documentos a procesar: 1
+2026-04-07 15:46:22 - proceso_completo - PASO 1 - Procesando OCR...
+2026-04-07 15:46:22 - procesar_documentos_pendientes - Total de PDFs encontrados: 1
+2026-04-07 15:46:22 - procesar_documentos_pendientes - Procesando (1/1): GD__ 14107.pdf
+2026-04-07 15:46:38 - analisis_ocr - Folio extraído: 14107
+2026-04-07 15:46:39 - analisis_ocr - JSON guardado: 14107.json
+2026-04-07 15:46:39 - analisis_ocr - PDF guardado en: C:\Users\marrano\OneDrive - Ofimundo\Escritorio\Proyectos\CONVATEC\ocr-prod\doc_procesados\14107/14107.pdf
+2026-04-07 15:46:39 - subir_archivo_xml - XML guardado: GUIA DE DESPACHO
+ELECTRONICA_61.606.001-5_14107.xml
+2026-04-07 15:46:39 - subir_archivo - Error: [Errno 2] No such file or directory: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento/14107.pdf'
+2026-04-07 15:46:39 - analizar_documento - Error eliminando carpeta: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\GD___14107.pdf'
+2026-04-07 15:46:39 - procesar_documentos_pendientes - Eliminado de pendientes: GD__ 14107.pdf
+2026-04-07 15:46:39 - procesar_documentos_pendientes - Error limpiando temporal: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\GD___14107.pdf'
+2026-04-07 15:46:39 - limpieza_procesados - Limpieza de carpeta procesados completada
+2026-04-07 15:46:39 - procesar_documentos_pendientes - Procesamiento completado. Total procesados: 1
+2026-04-07 15:46:39 - proceso_completo - PASO 1 - OCR completado
+2026-04-07 15:46:39 - proceso_completo - PASO 2 - Limpiando archivos temporales...
+2026-04-07 15:46:39 - limpiar_procesados - Limpieza de carpeta procesados completada
+2026-04-07 15:46:39 - proceso_completo - PASO 2 - Limpieza completada
+2026-04-07 15:46:39 - proceso_completo - PASO 3 - Convirtiendo JSON a XML...
+2026-04-07 15:46:39 - generar_xml - XML generado: xml\14107.xml
+2026-04-07 15:46:39 - procesar_jsons - ✅ Procesado: 14107.json -> xml\14107.xml
+2026-04-07 15:46:39 - procesar_jsons - Resumen: 1 procesados, 0 omitidos
+2026-04-07 15:46:39 - proceso_completo - PASO 3 - Conversión completada
+2026-04-07 15:46:39 - proceso_completo - PASO 4 - Limpiando JSONs procesados...
+2026-04-07 15:46:39 - limpiar_jsons - JSON eliminado (XML ya existe): 14107.json
+2026-04-07 15:46:39 - proceso_completo - PASO 4 - Limpieza completada
+2026-04-07 15:46:39 - proceso_completo - ========== PROCESO COMPLETADO EXITOSAMENTE ==========
+2026-04-07 15:46:39 - ejecutor - Proceso completado exitosamente en intento 1
+2026-04-07 15:46:39 - main - Scheduler configurado. Próxima ejecución en 30 minutos
+2026-04-07 15:48:27 - main - Programa detenido por el usuario
+2026-04-07 15:48:27 - main - ========== PROGRAMA DETENIDO ==========
+2026-04-07 15:51:36 - main - ========== PROGRAMA INICIADO ==========
+2026-04-07 15:51:36 - main - Horario permitido: 8:00 - 19:00
+2026-04-07 15:51:36 - main - Intervalo de ejecución: cada 30 minutos
+2026-04-07 15:51:36 - main - Máximo reintentos por fallo: 3
+2026-04-07 15:51:36 - main - Última ejecución exitosa: 2026-04-07 15:46:39
+2026-04-07 15:51:36 - main - Verificando documentos pendientes al iniciar...
+2026-04-07 15:51:36 - main - Ejecutando proceso inicial...
+2026-04-07 15:51:36 - ejecutor - Intento 1 de 3
+2026-04-07 15:51:36 - proceso_completo - ========== INICIANDO PROCESO ==========
+2026-04-07 15:51:36 - proceso_completo - Documentos a procesar: 1
+2026-04-07 15:51:36 - proceso_completo - PASO 1 - Procesando OCR...
+2026-04-07 15:51:36 - procesar_documentos_pendientes - Total de PDFs encontrados: 1
+2026-04-07 15:51:36 - procesar_documentos_pendientes - Procesando (1/1): GD_°_ 14072.pdf
+2026-04-07 15:52:04 - analisis_ocr - Folio extraído: 14072
+2026-04-07 15:52:04 - analisis_ocr - JSON guardado: 14072.json
+2026-04-07 15:52:04 - analisis_ocr - PDF guardado en: C:\Users\marrano\OneDrive - Ofimundo\Escritorio\Proyectos\CONVATEC\ocr-prod\doc_procesados\14072/14072.pdf
+2026-04-07 15:52:04 - analisis_ocr - Error: name 'current_folder_path' is not defined
+2026-04-07 15:52:04 - analizar_documento - Error eliminando carpeta: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\GD___14072.pdf'
+2026-04-07 15:52:04 - procesar_documentos_pendientes - Eliminado de pendientes: GD_°_ 14072.pdf
+2026-04-07 15:52:04 - procesar_documentos_pendientes - Error limpiando temporal: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\GD___14072.pdf'
+2026-04-07 15:52:04 - limpieza_procesados - Limpieza de carpeta procesados completada
+2026-04-07 15:52:04 - procesar_documentos_pendientes - Procesamiento completado. Total procesados: 1
+2026-04-07 15:52:04 - proceso_completo - PASO 1 - OCR completado
+2026-04-07 15:52:04 - proceso_completo - PASO 2 - Limpiando archivos temporales...
+2026-04-07 15:52:04 - limpiar_procesados - Limpieza de carpeta procesados completada
+2026-04-07 15:52:04 - proceso_completo - PASO 2 - Limpieza completada
+2026-04-07 15:52:04 - proceso_completo - PASO 3 - Convirtiendo JSON a XML...
+2026-04-07 15:52:05 - generar_xml - XML generado: xml\14072.xml
+2026-04-07 15:52:05 - procesar_jsons - ✅ Procesado: 14072.json -> xml\14072.xml
+2026-04-07 15:52:05 - procesar_jsons - Resumen: 1 procesados, 0 omitidos
+2026-04-07 15:52:05 - proceso_completo - PASO 3 - Conversión completada
+2026-04-07 15:52:05 - proceso_completo - PASO 4 - Limpiando JSONs procesados...
+2026-04-07 15:52:05 - limpiar_jsons - JSON eliminado (XML ya existe): 14072.json
+2026-04-07 15:52:05 - proceso_completo - PASO 4 - Limpieza completada
+2026-04-07 15:52:05 - proceso_completo - ========== PROCESO COMPLETADO EXITOSAMENTE ==========
+2026-04-07 15:52:05 - ejecutor - Proceso completado exitosamente en intento 1
+2026-04-07 15:52:05 - main - Scheduler configurado. Próxima ejecución en 30 minutos
+2026-04-07 15:54:50 - main - Programa detenido por el usuario
+2026-04-07 15:54:50 - main - ========== PROGRAMA DETENIDO ==========
+2026-04-07 15:55:05 - main - ========== PROGRAMA INICIADO ==========
+2026-04-07 15:55:05 - main - Horario permitido: 8:00 - 19:00
+2026-04-07 15:55:05 - main - Intervalo de ejecución: cada 30 minutos
+2026-04-07 15:55:05 - main - Máximo reintentos por fallo: 3
+2026-04-07 15:55:05 - main - Última ejecución exitosa: 2026-04-07 15:52:05
+2026-04-07 15:55:05 - main - Verificando documentos pendientes al iniciar...
+2026-04-07 15:55:05 - main - Ejecutando proceso inicial...
+2026-04-07 15:55:05 - ejecutor - Intento 1 de 3
+2026-04-07 15:55:05 - proceso_completo - ========== INICIANDO PROCESO ==========
+2026-04-07 15:55:05 - proceso_completo - Documentos a procesar: 1
+2026-04-07 15:55:05 - proceso_completo - PASO 1 - Procesando OCR...
+2026-04-07 15:55:05 - procesar_documentos_pendientes - Total de PDFs encontrados: 1
+2026-04-07 15:55:05 - procesar_documentos_pendientes - Procesando (1/1): 14072.pdf
+2026-04-07 15:55:26 - analisis_ocr - Folio extraído: 14072
+2026-04-07 15:55:27 - analisis_ocr - JSON guardado: 14072.json
+2026-04-07 15:55:27 - analisis_ocr - PDF guardado en: C:\Users\marrano\OneDrive - Ofimundo\Escritorio\Proyectos\CONVATEC\ocr-prod\doc_procesados\14072/14072.pdf
+2026-04-07 15:55:27 - analisis_ocr - Error: name 'current_folder_path' is not defined
+2026-04-07 15:55:27 - analizar_documento - Error eliminando carpeta: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\14072.pdf'
+2026-04-07 15:55:27 - procesar_documentos_pendientes - Eliminado de pendientes: 14072.pdf
+2026-04-07 15:55:27 - procesar_documentos_pendientes - Error limpiando temporal: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\14072.pdf'
+2026-04-07 15:55:27 - limpieza_procesados - Limpieza de carpeta procesados completada
+2026-04-07 15:55:27 - procesar_documentos_pendientes - Procesamiento completado. Total procesados: 1
+2026-04-07 15:55:27 - proceso_completo - PASO 1 - OCR completado
+2026-04-07 15:55:27 - proceso_completo - PASO 2 - Limpiando archivos temporales...
+2026-04-07 15:55:27 - limpiar_procesados - Limpieza de carpeta procesados completada
+2026-04-07 15:55:27 - proceso_completo - PASO 2 - Limpieza completada
+2026-04-07 15:55:27 - proceso_completo - PASO 3 - Convirtiendo JSON a XML...
+2026-04-07 15:55:27 - procesar_jsons - Omitiendo 14072.json - XML ya existe: 14072.xml
+2026-04-07 15:55:27 - procesar_jsons - Resumen: 0 procesados, 1 omitidos
+2026-04-07 15:55:27 - proceso_completo - PASO 3 - Conversión completada
+2026-04-07 15:55:27 - proceso_completo - PASO 4 - Limpiando JSONs procesados...
+2026-04-07 15:55:27 - limpiar_jsons - JSON eliminado (XML ya existe): 14072.json
+2026-04-07 15:55:27 - proceso_completo - PASO 4 - Limpieza completada
+2026-04-07 15:55:27 - proceso_completo - ========== PROCESO COMPLETADO EXITOSAMENTE ==========
+2026-04-07 15:55:27 - ejecutor - Proceso completado exitosamente en intento 1
+2026-04-07 15:55:27 - main - Scheduler configurado. Próxima ejecución en 30 minutos
+2026-04-07 15:55:32 - main - Programa detenido por el usuario
+2026-04-07 15:55:32 - main - ========== PROGRAMA DETENIDO ==========
+2026-04-07 15:56:44 - main - ========== PROGRAMA INICIADO ==========
+2026-04-07 15:56:44 - main - Horario permitido: 8:00 - 19:00
+2026-04-07 15:56:44 - main - Intervalo de ejecución: cada 30 minutos
+2026-04-07 15:56:44 - main - Máximo reintentos por fallo: 3
+2026-04-07 15:56:44 - main - Última ejecución exitosa: 2026-04-07 15:55:27
+2026-04-07 15:56:44 - main - Verificando documentos pendientes al iniciar...
+2026-04-07 15:56:44 - main - Ejecutando proceso inicial...
+2026-04-07 15:56:44 - ejecutor - Intento 1 de 3
+2026-04-07 15:56:44 - proceso_completo - ========== INICIANDO PROCESO ==========
+2026-04-07 15:56:44 - proceso_completo - Documentos a procesar: 1
+2026-04-07 15:56:44 - proceso_completo - PASO 1 - Procesando OCR...
+2026-04-07 15:56:44 - procesar_documentos_pendientes - Total de PDFs encontrados: 1
+2026-04-07 15:56:44 - procesar_documentos_pendientes - Procesando (1/1): 14072.pdf
+2026-04-07 15:57:05 - analisis_ocr - Folio extraído: 14072
+2026-04-07 15:57:06 - analisis_ocr - JSON guardado: 14072.json
+2026-04-07 15:57:06 - analisis_ocr - PDF guardado en: C:\Users\marrano\OneDrive - Ofimundo\Escritorio\Proyectos\CONVATEC\ocr-prod\doc_procesados\14072/14072.pdf
+2026-04-07 15:57:06 - analisis_ocr - Error: name 'current_folder_path' is not defined
+2026-04-07 15:57:06 - analizar_documento - Error eliminando carpeta: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\14072.pdf'
+2026-04-07 15:57:06 - procesar_documentos_pendientes - Eliminado de pendientes: 14072.pdf
+2026-04-07 15:57:06 - procesar_documentos_pendientes - Error limpiando temporal: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\14072.pdf'
+2026-04-07 15:57:06 - limpieza_procesados - Limpieza de carpeta procesados completada
+2026-04-07 15:57:06 - procesar_documentos_pendientes - Procesamiento completado. Total procesados: 1
+2026-04-07 15:57:06 - proceso_completo - PASO 1 - OCR completado
+2026-04-07 15:57:06 - proceso_completo - PASO 2 - Limpiando archivos temporales...
+2026-04-07 15:57:06 - limpiar_procesados - Limpieza de carpeta procesados completada
+2026-04-07 15:57:06 - proceso_completo - PASO 2 - Limpieza completada
+2026-04-07 15:57:06 - proceso_completo - PASO 3 - Convirtiendo JSON a XML...
+2026-04-07 15:57:06 - procesar_jsons - Omitiendo 14072.json - XML ya existe: 14072.xml
+2026-04-07 15:57:06 - procesar_jsons - Resumen: 0 procesados, 1 omitidos
+2026-04-07 15:57:06 - proceso_completo - PASO 3 - Conversión completada
+2026-04-07 15:57:06 - proceso_completo - PASO 4 - Limpiando JSONs procesados...
+2026-04-07 15:57:06 - limpiar_jsons - JSON eliminado (XML ya existe): 14072.json
+2026-04-07 15:57:06 - proceso_completo - PASO 4 - Limpieza completada
+2026-04-07 15:57:06 - proceso_completo - ========== PROCESO COMPLETADO EXITOSAMENTE ==========
+2026-04-07 15:57:06 - ejecutor - Proceso completado exitosamente en intento 1
+2026-04-07 15:57:06 - main - Scheduler configurado. Próxima ejecución en 30 minutos
+2026-04-07 16:04:51 - main - Programa detenido por el usuario
+2026-04-07 16:04:51 - main - ========== PROGRAMA DETENIDO ==========
+2026-04-07 16:06:22 - main - ========== PROGRAMA INICIADO ==========
+2026-04-07 16:06:22 - main - Horario permitido: 8:00 - 19:00
+2026-04-07 16:06:22 - main - Intervalo de ejecución: cada 30 minutos
+2026-04-07 16:06:22 - main - Máximo reintentos por fallo: 3
+2026-04-07 16:06:22 - main - Última ejecución exitosa: 2026-04-07 15:57:06
+2026-04-07 16:06:22 - main - Verificando documentos pendientes al iniciar...
+2026-04-07 16:06:22 - main - Ejecutando proceso inicial...
+2026-04-07 16:06:22 - ejecutor - Intento 1 de 3
+2026-04-07 16:06:22 - proceso_completo - ========== INICIANDO PROCESO ==========
+2026-04-07 16:06:22 - proceso_completo - Documentos a procesar: 1
+2026-04-07 16:06:22 - proceso_completo - PASO 1 - Procesando OCR...
+2026-04-07 16:06:22 - procesar_documentos_pendientes - Total de PDFs encontrados: 1
+2026-04-07 16:06:22 - procesar_documentos_pendientes - Procesando (1/1): 14072.pdf
+2026-04-07 16:06:49 - analisis_ocr - Folio extraído: 14072
+2026-04-07 16:06:50 - analisis_ocr - JSON guardado: 14072.json
+2026-04-07 16:06:50 - analisis_ocr - PDF guardado en: C:\Users\marrano\OneDrive - Ofimundo\Escritorio\Proyectos\CONVATEC\ocr-prod\doc_procesados\14072/14072.pdf
+2026-04-07 16:06:50 - enviar_a_destino - Error enviando archivos: [WinError 5] Acceso denegado: 'C:\\Users\\CONVATEC-IMPRESION'
+2026-04-07 16:06:50 - analisis_ocr - Error eliminando temporales: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento/14072.pdf'
+2026-04-07 16:06:50 - analizar_documento - Error eliminando carpeta: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\14072.pdf'
+2026-04-07 16:06:50 - procesar_documentos_pendientes - Eliminado de pendientes: 14072.pdf
+2026-04-07 16:06:50 - procesar_documentos_pendientes - Error limpiando temporal: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\14072.pdf'
+2026-04-07 16:06:50 - limpieza_procesados - Limpieza de carpeta procesados completada
+2026-04-07 16:06:50 - procesar_documentos_pendientes - Procesamiento completado. Total procesados: 1
+2026-04-07 16:06:50 - proceso_completo - PASO 1 - OCR completado
+2026-04-07 16:06:50 - proceso_completo - PASO 2 - Limpiando archivos temporales...
+2026-04-07 16:06:50 - limpiar_procesados - Limpieza de carpeta procesados completada
+2026-04-07 16:06:50 - proceso_completo - PASO 2 - Limpieza completada
+2026-04-07 16:06:50 - proceso_completo - ========== PROCESO COMPLETADO EXITOSAMENTE ==========
+2026-04-07 16:06:50 - ejecutor - Proceso completado exitosamente en intento 1
+2026-04-07 16:06:50 - main - Scheduler configurado. Próxima ejecución en 30 minutos
+2026-04-07 16:07:07 - main - Programa detenido por el usuario
+2026-04-07 16:07:07 - main - ========== PROGRAMA DETENIDO ==========
+2026-04-07 16:10:44 - main - ========== PROGRAMA INICIADO ==========
+2026-04-07 16:10:44 - main - Horario permitido: 8:00 - 19:00
+2026-04-07 16:10:44 - main - Intervalo de ejecución: cada 30 minutos
+2026-04-07 16:10:44 - main - Máximo reintentos por fallo: 3
+2026-04-07 16:10:44 - main - Última ejecución exitosa: 2026-04-07 16:06:50
+2026-04-07 16:10:44 - main - Verificando documentos pendientes al iniciar...
+2026-04-07 16:10:44 - main - Ejecutando proceso inicial...
+2026-04-07 16:10:44 - ejecutor - Intento 1 de 3
+2026-04-07 16:10:44 - proceso_completo - ========== INICIANDO PROCESO ==========
+2026-04-07 16:10:44 - proceso_completo - Documentos a procesar: 1
+2026-04-07 16:10:44 - proceso_completo - PASO 1 - Procesando OCR...
+2026-04-07 16:10:44 - procesar_documentos_pendientes - Total de PDFs encontrados: 1
+2026-04-07 16:10:44 - procesar_documentos_pendientes - Procesando (1/1): 14072.pdf
+2026-04-07 16:11:14 - analisis_ocr - Folio extraído: 14072
+2026-04-07 16:11:15 - analisis_ocr - JSON guardado: 14072.json
+2026-04-07 16:11:15 - analisis_ocr - PDF guardado en: C:\Users\marrano\OneDrive - Ofimundo\Escritorio\Proyectos\CONVATEC\ocr-prod\doc_procesados\14072/14072.pdf
+2026-04-07 16:11:15 - enviar_a_destino - Error enviando archivos: [WinError 5] Acceso denegado: 'C:\\Users\\CONVATEC-IMPRESION'
+2026-04-07 16:11:15 - analisis_ocr - Error eliminando temporales: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento/14072.pdf'
+2026-04-07 16:11:15 - analizar_documento - Error eliminando carpeta: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\14072.pdf'
+2026-04-07 16:11:15 - procesar_documentos_pendientes - Eliminado de pendientes: 14072.pdf
+2026-04-07 16:11:15 - procesar_documentos_pendientes - Error limpiando temporal: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\14072.pdf'
+2026-04-07 16:11:15 - limpieza_procesados - Limpieza de carpeta procesados completada
+2026-04-07 16:11:15 - procesar_documentos_pendientes - Procesamiento completado. Total procesados: 1
+2026-04-07 16:11:15 - proceso_completo - PASO 1 - OCR completado
+2026-04-07 16:11:15 - proceso_completo - PASO 2 - Limpiando archivos temporales...
+2026-04-07 16:11:15 - limpiar_procesados - Limpieza de carpeta procesados completada
+2026-04-07 16:11:15 - proceso_completo - PASO 2 - Limpieza completada
+2026-04-07 16:11:15 - proceso_completo - ========== PROCESO COMPLETADO EXITOSAMENTE ==========
+2026-04-07 16:11:15 - ejecutor - Proceso completado exitosamente en intento 1
+2026-04-07 16:11:15 - main - Scheduler configurado. Próxima ejecución en 30 minutos
+2026-04-07 16:11:44 - main - Programa detenido por el usuario
+2026-04-07 16:11:44 - main - ========== PROGRAMA DETENIDO ==========
+2026-04-07 16:59:28 - main - ========== PROGRAMA INICIADO ==========
+2026-04-07 16:59:28 - main - Horario permitido: 8:00 - 19:00
+2026-04-07 16:59:28 - main - Intervalo de ejecución: cada 30 minutos
+2026-04-07 16:59:28 - main - Máximo reintentos por fallo: 3
+2026-04-07 16:59:28 - main - Última ejecución exitosa: 2026-04-07 16:11:15
+2026-04-07 16:59:28 - main - Verificando documentos pendientes al iniciar...
+2026-04-07 16:59:28 - main - Ejecutando proceso inicial...
+2026-04-07 16:59:28 - ejecutor - Intento 1 de 3
+2026-04-07 16:59:28 - proceso_completo - ========== INICIANDO PROCESO ==========
+2026-04-07 16:59:28 - proceso_completo - Documentos a procesar: 1
+2026-04-07 16:59:28 - proceso_completo - PASO 1 - Procesando OCR...
+2026-04-07 16:59:28 - procesar_documentos_pendientes - Total de PDFs encontrados: 1
+2026-04-07 16:59:28 - procesar_documentos_pendientes - Procesando (1/1): FAC_!283.pdf
+2026-04-07 16:59:50 - analisis_ocr - Folio extraído: 97283
+2026-04-07 16:59:51 - analisis_ocr - JSON guardado: 97283.json
+2026-04-07 16:59:51 - analisis_ocr - PDF guardado en: C:\Users\marrano\OneDrive - Ofimundo\Escritorio\Proyectos\CONVATEC\ocr-prod\doc_procesados\97283/97283.pdf
+2026-04-07 16:59:51 - enviar_a_destino - Error enviando archivos: [WinError 5] Acceso denegado: 'C:\\Users\\CONVATEC-IMPRESION'
+2026-04-07 16:59:51 - analizar_documento - Error eliminando carpeta: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\FAC_283.pdf'
+2026-04-07 16:59:51 - procesar_documentos_pendientes - Eliminado de pendientes: FAC_!283.pdf
+2026-04-07 16:59:51 - procesar_documentos_pendientes - Error limpiando temporal: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\FAC_283.pdf'
+2026-04-07 16:59:51 - limpieza_procesados - Limpieza de carpeta procesados completada
+2026-04-07 16:59:51 - procesar_documentos_pendientes - Procesamiento completado. Total procesados: 1
+2026-04-07 16:59:51 - proceso_completo - PASO 1 - OCR completado
+2026-04-07 16:59:51 - proceso_completo - PASO 2 - Limpiando archivos temporales...
+2026-04-07 16:59:51 - limpiar_procesados - Limpieza de carpeta procesados completada
+2026-04-07 16:59:51 - proceso_completo - PASO 2 - Limpieza completada
+2026-04-07 16:59:51 - proceso_completo - ========== PROCESO COMPLETADO EXITOSAMENTE ==========
+2026-04-07 16:59:51 - ejecutor - Proceso completado exitosamente en intento 1
+2026-04-07 16:59:51 - main - Scheduler configurado. Próxima ejecución en 30 minutos
+2026-04-07 17:29:51 - scheduler - Verificando ejecución programada - 2026-04-07 17:29:51
+2026-04-07 17:29:51 - scheduler - Iniciando ejecución programada...
+2026-04-07 17:29:51 - ejecutor - Intento 1 de 3
+2026-04-07 17:29:51 - proceso_completo - No hay documentos para procesar
+2026-04-07 17:29:51 - ejecutor - No había documentos para procesar en intento 1
+2026-04-07 17:56:15 - main - Programa detenido por el usuario
+2026-04-07 17:56:15 - main - ========== PROGRAMA DETENIDO ==========
+2026-04-09 10:16:19 - main - ========== PROGRAMA INICIADO ==========
+2026-04-09 10:16:19 - main - Horario permitido: 24 horas al día, 7 días a la semana
+2026-04-09 10:16:19 - main - Intervalo de ejecución: cada 5 minutos
+2026-04-09 10:16:19 - main - Máximo reintentos por fallo: 3
+2026-04-09 10:16:19 - main - Última ejecución exitosa: 2026-04-07 16:59:51
+2026-04-09 10:16:19 - main - Verificando documentos pendientes al iniciar...
+2026-04-09 10:16:19 - main - Ejecutando proceso inicial...
+2026-04-09 10:16:19 - ejecutor - Intento 1 de 3
+2026-04-09 10:16:19 - proceso_completo - ========== INICIANDO PROCESO ==========
+2026-04-09 10:16:19 - proceso_completo - Documentos a procesar: 2
+2026-04-09 10:16:19 - proceso_completo - PASO 1 - Procesando OCR...
+2026-04-09 10:16:19 - procesar_documentos_pendientes - Total de PDFs encontrados: 2
+2026-04-09 10:16:19 - procesar_documentos_pendientes - Procesando (1/2): FAC_!283.pdf
+2026-04-09 10:16:38 - analisis_ocr - Folio extraído: 97283
+2026-04-09 10:16:39 - analisis_ocr - JSON guardado: 97283.json
+2026-04-09 10:16:39 - analisis_ocr - PDF guardado como: FAC_97283.pdf
+2026-04-09 10:16:39 - enviar_a_destino - Error enviando archivos: [WinError 5] Acceso denegado: 'C:\\Users\\CONVATEC-IMPRESION'
+2026-04-09 10:16:40 - analizar_documento - Error eliminando carpeta: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\FAC_283.pdf'
+2026-04-09 10:16:41 - procesar_documentos_pendientes - Eliminado de pendientes: FAC_!283.pdf
+2026-04-09 10:16:41 - procesar_documentos_pendientes - Error limpiando temporal: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\FAC_283.pdf'
+2026-04-09 10:16:41 - procesar_documentos_pendientes - Procesando (2/2): GD__ 14107.pdf
+2026-04-09 10:16:58 - analisis_ocr - Folio extraído: 14107
+2026-04-09 10:16:58 - analisis_ocr - JSON guardado: 14107.json
+2026-04-09 10:16:58 - analisis_ocr - PDF guardado como: GD_14107.pdf
+2026-04-09 10:16:58 - enviar_a_destino - Error enviando archivos: [WinError 5] Acceso denegado: 'C:\\Users\\CONVATEC-IMPRESION'
+2026-04-09 10:16:59 - analizar_documento - Error eliminando carpeta: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\FAC_283.pdf'
+2026-04-09 10:17:00 - procesar_documentos_pendientes - Eliminado de pendientes: GD__ 14107.pdf
+2026-04-09 10:17:00 - procesar_documentos_pendientes - Error limpiando temporal: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\FAC_283.pdf'
+2026-04-09 10:17:00 - limpieza_procesados - Limpieza de carpeta procesados completada
+2026-04-09 10:17:00 - procesar_documentos_pendientes - Procesamiento completado. Total procesados: 2
+2026-04-09 10:17:00 - proceso_completo - PASO 1 - OCR completado
+2026-04-09 10:17:00 - proceso_completo - PASO 2 - Limpiando archivos temporales...
+2026-04-09 10:17:00 - limpiar_procesados - Limpieza de carpeta procesados completada
+2026-04-09 10:17:00 - proceso_completo - PASO 2 - Limpieza completada
+2026-04-09 10:17:00 - proceso_completo - ========== PROCESO COMPLETADO EXITOSAMENTE ==========
+2026-04-09 10:17:00 - ejecutor - Proceso completado exitosamente en intento 1
+2026-04-09 10:17:00 - main - Scheduler configurado. Próxima ejecución en 5 minutos
+2026-04-09 10:20:29 - main - Programa detenido por el usuario
+2026-04-09 10:20:29 - main - ========== PROGRAMA DETENIDO ==========
+2026-04-09 10:27:05 - main - ========== PROGRAMA INICIADO ==========
+2026-04-09 10:27:05 - main - Horario permitido: 24 horas al día, 7 días a la semana
+2026-04-09 10:27:05 - main - Intervalo de ejecución: cada 5 minutos
+2026-04-09 10:27:05 - main - Máximo reintentos por fallo: 3
+2026-04-09 10:27:05 - main - Última ejecución exitosa: 2026-04-09 10:17:00
+2026-04-09 10:27:05 - main - Verificando documentos pendientes al iniciar...
+2026-04-09 10:27:05 - main - Ejecutando proceso inicial...
+2026-04-09 10:27:05 - ejecutor - Intento 1 de 3
+2026-04-09 10:27:05 - proceso_completo - ========== INICIANDO PROCESO ==========
+2026-04-09 10:27:05 - proceso_completo - Documentos a procesar: 1
+2026-04-09 10:27:05 - proceso_completo - PASO 1 - Procesando OCR...
+2026-04-09 10:27:05 - procesar_documentos_pendientes - Total de PDFs encontrados: 1
+2026-04-09 10:27:05 - procesar_documentos_pendientes - Procesando (1/1): FAC_!283.pdf
+2026-04-09 10:27:22 - analisis_ocr - Folio extraído: 97283
+2026-04-09 10:27:23 - analisis_ocr - JSON guardado: 97283.json
+2026-04-09 10:27:23 - analisis_ocr - PDF guardado como: FAC_97283.pdf
+2026-04-09 10:27:23 - enviar_a_destino - Error enviando archivos: [WinError 5] Acceso denegado: 'C:\\Users\\CONVATEC-IMPRESION'
+2026-04-09 10:27:24 - analizar_documento - Error eliminando carpeta: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\FAC_283.pdf'
+2026-04-09 10:27:25 - procesar_documentos_pendientes - Eliminado de pendientes: FAC_!283.pdf
+2026-04-09 10:27:25 - procesar_documentos_pendientes - Error limpiando temporal: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\FAC_283.pdf'
+2026-04-09 10:27:25 - limpieza_procesados - Limpieza de carpeta procesados completada
+2026-04-09 10:27:25 - procesar_documentos_pendientes - Procesamiento completado. Total procesados: 1
+2026-04-09 10:27:25 - proceso_completo - PASO 1 - OCR completado
+2026-04-09 10:27:25 - proceso_completo - PASO 2 - Limpiando archivos temporales...
+2026-04-09 10:27:25 - limpiar_procesados - Limpieza de carpeta procesados completada
+2026-04-09 10:27:25 - proceso_completo - PASO 2 - Limpieza completada
+2026-04-09 10:27:25 - proceso_completo - ========== PROCESO COMPLETADO EXITOSAMENTE ==========
+2026-04-09 10:27:25 - ejecutor - Proceso completado exitosamente en intento 1
+2026-04-09 10:27:25 - main - Scheduler configurado. Próxima ejecución en 5 minutos
+2026-04-09 10:27:42 - main - Programa detenido por el usuario
+2026-04-09 10:27:42 - main - ========== PROGRAMA DETENIDO ==========
+2026-04-09 11:03:10 - main - ========== PROGRAMA INICIADO ==========
+2026-04-09 11:03:10 - main - Horario permitido: 24 horas al día, 7 días a la semana
+2026-04-09 11:03:10 - main - Intervalo de ejecución: cada 5 minutos
+2026-04-09 11:03:10 - main - Máximo reintentos por fallo: 3
+2026-04-09 11:03:10 - main - Última ejecución exitosa: 2026-04-09 10:27:25
+2026-04-09 11:03:10 - main - Verificando documentos pendientes al iniciar...
+2026-04-09 11:03:10 - main - Ejecutando proceso inicial...
+2026-04-09 11:03:10 - ejecutor - Intento 1 de 3
+2026-04-09 11:03:10 - proceso_completo - ========== INICIANDO PROCESO ==========
+2026-04-09 11:03:10 - proceso_completo - Documentos a procesar: 1
+2026-04-09 11:03:10 - proceso_completo - Procesando OCR...
+2026-04-09 11:03:10 - procesar_documentos_pendientes - Total de PDFs encontrados: 1
+2026-04-09 11:03:10 - procesar_documentos_pendientes - Procesando (1/1): FAC_97283.pdf
+2026-04-09 11:03:33 - analisis_ocr - Folio extraído: 97283
+2026-04-09 11:03:34 - analisis_ocr - JSON guardado: 97283.json
+2026-04-09 11:03:34 - analisis_ocr - PDF guardado como: FAC_97283.pdf
+2026-04-09 11:03:34 - enviar_a_destino - Error enviando archivos: [WinError 5] Acceso denegado: 'C:\\Users\\CONVATEC-IMPRESION'
+2026-04-09 11:03:35 - analizar_documento - Error eliminando carpeta: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\FAC_97283.pdf'
+2026-04-09 11:03:36 - procesar_documentos_pendientes - Eliminado de pendientes: FAC_97283.pdf
+2026-04-09 11:03:36 - procesar_documentos_pendientes - Error limpiando temporal: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\marrano\\OneDrive - Ofimundo\\Escritorio\\Proyectos\\CONVATEC\\ocr-prod\\temp_procesamiento\\FAC_97283.pdf'
+2026-04-09 11:03:36 - limpieza_procesados - Limpieza de carpeta procesados completada
+2026-04-09 11:03:36 - procesar_documentos_pendientes - Procesamiento completado. Total procesados: 1
+2026-04-09 11:03:36 - proceso_completo - OCR completado
+2026-04-09 11:03:36 - proceso_completo - Limpiando archivos temporales...
+2026-04-09 11:03:36 - limpiar_procesados - Limpieza de carpeta procesados completada
+2026-04-09 11:03:36 - proceso_completo - Limpieza completada
+2026-04-09 11:03:36 - proceso_completo - ========== PROCESO COMPLETADO EXITOSAMENTE ==========
+2026-04-09 11:03:36 - ejecutor - Proceso completado exitosamente en intento 1
+2026-04-09 11:03:36 - main - Scheduler configurado. Próxima ejecución en 5 minutos
+2026-04-09 11:08:00 - main - Programa detenido por el usuario
+2026-04-09 11:08:00 - main - ========== PROGRAMA DETENIDO ==========
+2026-04-09 11:08:11 - main - ========== PROGRAMA INICIADO ==========
+2026-04-09 11:08:11 - main - Intervalo: cada 5 minutos
+2026-04-09 11:08:11 - proceso_completo - Iniciando proceso - 1 documentos
+2026-04-09 11:08:11 - procesar_documentos_pendientes - Total de PDFs: 1
+2026-04-09 11:08:30 - analisis_ocr - Folio extraído: 97283
+2026-04-09 11:08:30 - enviar_a_destino - Error: [WinError 5] Acceso denegado: 'C:\\Users\\CONVATEC-IMPRESION'
+2026-04-09 11:08:31 - procesar_documentos_pendientes - Completado. Procesados: 1
+2026-04-09 11:08:31 - proceso_completo - Proceso completado exitosamente
+2026-04-09 11:09:38 - main - Programa detenido
+2026-04-09 11:41:56 - main - ========== PROGRAMA INICIADO ==========
+2026-04-09 11:41:56 - main - Horario: 24 horas al día, 7 días a la semana
+2026-04-09 11:41:56 - main - Intervalo: cada 5 minutos
+2026-04-09 11:41:56 - main - Máximo reintentos: 3
+2026-04-09 11:41:56 - proceso_completo - Iniciando proceso - 1 documentos
+2026-04-09 11:41:56 - procesar_documentos_pendientes - Total de PDFs: 1
+2026-04-09 11:42:40 - main - ========== PROGRAMA INICIADO ==========
+2026-04-09 11:42:40 - main - Horario: 24 horas al día, 7 días a la semana
+2026-04-09 11:42:40 - main - Intervalo: cada 5 minutos
+2026-04-09 11:42:40 - main - Máximo reintentos: 3
+2026-04-09 11:44:12 - main - ========== PROGRAMA INICIADO ==========
+2026-04-09 11:44:12 - main - Horario: 24 horas al día, 7 días a la semana
+2026-04-09 11:44:12 - main - Intervalo: cada 5 minutos
+2026-04-09 11:44:12 - main - Máximo reintentos: 3
+2026-04-09 11:44:14 - main - Programa detenido por el usuario
+2026-04-09 11:44:14 - main - ========== PROGRAMA DETENIDO ==========
+2026-04-09 11:44:41 - main - ========== PROGRAMA INICIADO ==========
+2026-04-09 11:44:41 - main - Horario: 24 horas al día, 7 días a la semana
+2026-04-09 11:44:41 - main - Intervalo: cada 5 minutos
+2026-04-09 11:44:41 - main - Máximo reintentos: 3
+2026-04-09 11:45:16 - main - Programa detenido por el usuario
+2026-04-09 11:45:16 - main - ========== PROGRAMA DETENIDO ==========
+2026-04-09 11:45:41 - main - ========== PROGRAMA INICIADO ==========
+2026-04-09 11:45:41 - main - Horario: 24 horas al día, 7 días a la semana
+2026-04-09 11:45:41 - main - Intervalo: cada 5 minutos
+2026-04-09 11:45:41 - main - Máximo reintentos: 3
+2026-04-09 11:46:41 - main - Programa detenido por el usuario
+2026-04-09 11:46:41 - main - ========== PROGRAMA DETENIDO ==========
+2026-04-09 11:46:47 - main - ========== PROGRAMA INICIADO ==========
+2026-04-09 11:46:47 - main - Intervalo: cada 5 minutos
+2026-04-09 11:48:05 - main - Programa detenido
+2026-04-09 11:48:22 - main - ========== PROGRAMA INICIADO ==========
+2026-04-09 11:48:22 - main - Intervalo: cada 5 minutos
+2026-04-09 11:49:59 - main - Programa detenido
+2026-04-09 11:50:03 - main - ========== PROGRAMA INICIADO ==========
+2026-04-09 11:50:03 - main - Intervalo: cada 5 minutos
+2026-04-09 11:50:53 - main - Programa detenido
+2026-04-09 11:50:57 - main - ========== PROGRAMA INICIADO ==========
+2026-04-09 11:50:57 - main - Intervalo: cada 5 minutos
+2026-04-09 11:50:57 - proceso_completo - Iniciando proceso - 1 documentos
+2026-04-09 11:50:57 - procesar_documentos_pendientes - Total de PDFs: 1
+2026-04-09 11:51:14 - analisis_ocr - Folio extraído: 97283
+2026-04-09 11:51:14 - enviar_a_destino - Error: [WinError 5] Acceso denegado: 'C:\\Users\\CONVATEC-IMPRESION'
+2026-04-09 11:51:15 - procesar_documentos_pendientes - Completado. Procesados: 1
+2026-04-09 11:51:15 - proceso_completo - Proceso completado exitosamente
+2026-04-09 11:54:08 - main - Programa detenido
+2026-04-09 11:55:50 - main - ========== PROGRAMA INICIADO ==========
+2026-04-09 11:55:50 - main - Horario: 24 horas al día, 7 días a la semana
+2026-04-09 11:55:50 - main - Intervalo: cada 5 minutos
+2026-04-09 11:55:50 - main - Timeout automático: 30 minutos
+2026-04-09 11:55:50 - proceso_completo - Iniciando proceso - 1 documentos
+2026-04-09 11:55:50 - procesar_documentos_pendientes - Total de PDFs: 1
+2026-04-09 11:56:07 - analisis_ocr - Folio extraído: 97283
+2026-04-09 11:56:07 - enviar_a_destino - Error: [WinError 5] Acceso denegado: 'C:\\Users\\CONVATEC-IMPRESION'
+2026-04-09 11:56:08 - procesar_documentos_pendientes - Completado. Procesados: 1
+2026-04-09 11:56:08 - proceso_completo - Proceso completado exitosamente
+2026-04-09 11:56:41 - main - Programa detenido por el usuario
+2026-04-09 11:56:41 - main - ========== PROGRAMA DETENIDO ==========
+2026-08-06 09:28:48 - main - ========== PROGRAMA INICIADO ==========
+2026-08-06 09:28:48 - main - Horario: 24 horas al día, 7 días a la semana
+2026-08-06 09:28:48 - main - Intervalo: cada 5 minutos
+2026-08-06 09:28:48 - main - Timeout automático: 30 minutos
+2026-08-06 09:28:48 - proceso_completo - Iniciando proceso - 1 documentos
+2026-08-06 09:28:48 - procesar_documentos_pendientes - Total de PDFs: 1
+2026-08-06 09:28:49 - analisis_ocr - Error: 401 Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+2026-08-06 09:28:50 - procesar_documentos_pendientes - Completado. Procesados: 1
+2026-08-06 09:28:50 - proceso_completo - Proceso completado exitosamente
+2026-08-06 09:29:32 - main - Programa detenido por el usuario
+2026-08-06 09:29:32 - main - ========== PROGRAMA DETENIDO ==========
+2026-08-07 08:52:50 - main - ========== PROGRAMA INICIADO ==========
+2026-08-07 08:52:50 - main - Horario: 24 horas al día, 7 días a la semana
+2026-08-07 08:52:50 - main - Intervalo: cada 5 minutos
+2026-08-07 08:52:50 - main - Timeout automático: 30 minutos
+2026-08-07 08:52:50 - proceso_completo - Iniciando proceso - 1 documentos
+2026-08-07 08:52:50 - procesar_documentos_pendientes - Total de PDFs: 1
+2026-08-07 08:53:03 - analisis_ocr - Folio extraído: 12537
+2026-08-07 08:53:03 - enviar_a_destino - Enviados: GD_12537.pdf y .xml
+2026-08-07 08:53:04 - procesar_documentos_pendientes - Completado. Procesados: 1
+2026-08-07 08:53:04 - proceso_completo - Proceso completado exitosamente
+2026-08-07 08:53:31 - main - Programa detenido por el usuario
+2026-08-07 08:53:31 - main - ========== PROGRAMA DETENIDO ==========
+2026-08-07 08:54:35 - main - ========== PROGRAMA INICIADO ==========
+2026-08-07 08:54:35 - main - Horario: 24 horas al día, 7 días a la semana
+2026-08-07 08:54:35 - main - Intervalo: cada 5 minutos
+2026-08-07 08:54:35 - main - Timeout automático: 30 minutos
+2026-08-07 08:54:35 - proceso_completo - Iniciando proceso - 1 documentos
+2026-08-07 08:54:35 - procesar_documentos_pendientes - Total de PDFs: 1
+2026-08-07 08:54:48 - analisis_ocr - Folio extraído: 12537
+2026-08-07 08:54:48 - enviar_a_destino - Enviados: GD_12537.pdf y .xml
+2026-08-07 08:54:49 - procesar_documentos_pendientes - Completado. Procesados: 1
+2026-08-07 08:54:49 - proceso_completo - Proceso completado exitosamente
+2026-08-07 09:11:13 - main - Programa detenido por el usuario
+2026-08-07 09:11:13 - main - ========== PROGRAMA DETENIDO ==========
+2026-09-24 08:45:57 - main - ========== PROGRAMA INICIADO ==========
+2026-09-24 08:45:57 - main - Horario: 24 horas al día, 7 días a la semana
+2026-09-24 08:45:57 - main - Intervalo: cada 5 minutos
+2026-09-24 08:45:57 - main - Timeout automático: 30 minutos
+2026-09-24 08:46:15 - main - ========== PROGRAMA INICIADO ==========
+2026-09-24 08:46:15 - main - Horario: 24 horas al día, 7 días a la semana
+2026-09-24 08:46:15 - main - Intervalo: cada 5 minutos
+2026-09-24 08:46:15 - main - Timeout automático: 30 minutos
+2026-09-24 08:46:52 - main - Programa detenido por el usuario
+2026-09-24 08:46:52 - main - ========== PROGRAMA DETENIDO ==========
+2026-09-24 08:46:56 - main - ========== PROGRAMA INICIADO ==========
+2026-09-24 08:46:56 - main - Horario: 24 horas al día, 7 días a la semana
+2026-09-24 08:46:56 - main - Intervalo: cada 5 minutos
+2026-09-24 08:46:56 - main - Timeout automático: 30 minutos
+2026-09-24 09:06:56 - proceso_completo - Iniciando proceso - 2 documentos
+2026-09-24 09:06:56 - procesar_documentos_pendientes - Total de PDFs: 2
+2026-09-24 09:07:13 - analisis_ocr - Folio extraído: 97283
+2026-09-24 09:07:13 - enviar_a_destino - Enviados a C:\Users\marrano\Desktop\Convatec\SubirComidor: FAC_97283.pdf y .xml
+2026-09-24 09:07:13 - enviar_a_destino - Enviados a C:\Users\marrano\Desktop\SubirComidor: FAC_97283.pdf y .xml
+2026-09-24 09:07:13 - enviar_a_destino - Enviados a C:\Users\marrano\Desktop\Desarrollo\convatec_version_2\Ocr_convatec\SubirComidor: FAC_97283.pdf y .xml
+2026-09-24 09:07:37 - analisis_ocr - Folio extraído: 14072
+2026-09-24 09:07:37 - enviar_a_destino - Enviados a C:\Users\marrano\Desktop\Convatec\SubirComidor: GD_14072.pdf y .xml
+2026-09-24 09:07:37 - enviar_a_destino - Enviados a C:\Users\marrano\Desktop\SubirComidor: GD_14072.pdf y .xml
+2026-09-24 09:07:37 - enviar_a_destino - Enviados a C:\Users\marrano\Desktop\Desarrollo\convatec_version_2\Ocr_convatec\SubirComidor: GD_14072.pdf y .xml
+2026-09-24 09:07:38 - procesar_documentos_pendientes - Completado. Procesados: 2
+2026-09-24 09:07:38 - proceso_completo - Proceso completado exitosamente
+2026-09-24 09:32:38 - proceso_completo - Iniciando proceso - 2 documentos
+2026-09-24 09:32:38 - procesar_documentos_pendientes - Total de PDFs: 2
+2026-09-24 09:32:59 - analisis_ocr - Folio extraído: 97283
+2026-09-24 09:32:59 - enviar_a_destino - Enviados a C:\Users\marrano\Desktop\Convatec\SubirComidor: FAC_97283.pdf y .xml
+2026-09-24 09:32:59 - enviar_a_destino - Enviados a C:\Users\marrano\Desktop\SubirComidor: FAC_97283.pdf y .xml
+2026-09-24 09:32:59 - enviar_a_destino - Enviados a C:\Users\marrano\Desktop\Desarrollo\convatec_version_2\Ocr_convatec\SubirComidor: FAC_97283.pdf y .xml
+2026-09-24 09:33:35 - analisis_ocr - Folio extraído: 14072
+2026-09-24 09:33:35 - enviar_a_destino - Enviados a C:\Users\marrano\Desktop\Convatec\SubirComidor: GD_14072.pdf y .xml
+2026-09-24 09:33:35 - enviar_a_destino - Enviados a C:\Users\marrano\Desktop\SubirComidor: GD_14072.pdf y .xml
+2026-09-24 09:33:35 - enviar_a_destino - Enviados a C:\Users\marrano\Desktop\Desarrollo\convatec_version_2\Ocr_convatec\SubirComidor: GD_14072.pdf y .xml
+2026-09-24 09:33:36 - procesar_documentos_pendientes - Completado. Procesados: 2
+2026-09-24 09:33:36 - proceso_completo - Proceso completado exitosamente
+2026-09-24 09:43:36 - proceso_completo - Iniciando proceso - 1 documentos
+2026-09-24 09:43:36 - procesar_documentos_pendientes - Total de PDFs: 1
+2026-09-24 09:43:57 - analisis_ocr - Folio extraído: 14072
+2026-09-24 09:43:57 - enviar_a_destino - Enviados a C:\Users\marrano\Desktop\Convatec\SubirComidor: GD_14072.pdf y .xml
+2026-09-24 09:43:57 - enviar_a_destino - Enviados a C:\Users\marrano\Desktop\SubirComidor: GD_14072.pdf y .xml
+2026-09-24 09:43:57 - enviar_a_destino - Enviados a C:\Users\marrano\Desktop\Desarrollo\convatec_version_2\Ocr_convatec\SubirComidor: GD_14072.pdf y .xml
+2026-09-24 09:43:58 - procesar_documentos_pendientes - Completado. Procesados: 1
+2026-09-24 09:43:58 - proceso_completo - Proceso completado exitosamente
+2026-09-24 09:48:58 - proceso_completo - Iniciando proceso - 1 documentos
+2026-09-24 09:48:58 - procesar_documentos_pendientes - Total de PDFs: 1
+2026-09-24 09:49:14 - analisis_ocr - Folio extraído: 97283
+2026-09-24 09:49:14 - enviar_a_destino - Enviados a C:\Users\marrano\Desktop\Convatec\SubirComidor: FAC_97283.pdf y .xml
+2026-09-24 09:49:14 - enviar_a_destino - Enviados a C:\Users\marrano\Desktop\SubirComidor: FAC_97283.pdf y .xml
+2026-09-24 09:49:14 - enviar_a_destino - Enviados a C:\Users\marrano\Desktop\Desarrollo\convatec_version_2\Ocr_convatec\SubirComidor: FAC_97283.pdf y .xml
+2026-09-24 09:49:15 - procesar_documentos_pendientes - Completado. Procesados: 1
+2026-09-24 09:49:15 - proceso_completo - Proceso completado exitosamente
+2026-09-24 10:04:15 - proceso_completo - Iniciando proceso - 1 documentos
+2026-09-24 10:04:15 - procesar_documentos_pendientes - Total de PDFs: 1
+2026-09-24 10:04:29 - analisis_ocr - Folio extraído: 97283
+2026-09-24 10:04:29 - enviar_a_destino - Enviados a C:\Users\marrano\Desktop\Convatec\SubirComidor: FAC_97283.pdf y .xml
+2026-09-24 10:04:29 - enviar_a_destino - Enviados a C:\Users\marrano\Desktop\SubirComidor: FAC_97283.pdf y .xml
+2026-09-24 10:04:29 - enviar_a_destino - Enviados a C:\Users\marrano\Desktop\Desarrollo\convatec_version_2\Ocr_convatec\SubirComidor: FAC_97283.pdf y .xml
+2026-09-24 10:04:30 - procesar_documentos_pendientes - Completado. Procesados: 1
+2026-09-24 10:04:30 - proceso_completo - Proceso completado exitosamente
+2026-09-24 10:14:30 - proceso_completo - Iniciando proceso - 1 documentos
+2026-09-24 10:14:30 - procesar_documentos_pendientes - Total de PDFs: 1
+2026-09-24 10:14:53 - analisis_ocr - Folio extraído: 14072
+2026-09-24 10:14:53 - enviar_a_destino - Enviados a C:\Users\marrano\Desktop\Convatec\SubirComidor: GD_14072.pdf y .xml
+2026-09-24 10:14:53 - enviar_a_destino - Enviados a C:\Users\marrano\Desktop\SubirComidor: GD_14072.pdf y .xml
+2026-09-24 10:14:53 - enviar_a_destino - Enviados a C:\Users\marrano\Desktop\Desarrollo\convatec_version_2\Ocr_convatec\SubirComidor: GD_14072.pdf y .xml
+2026-09-24 10:14:54 - procesar_documentos_pendientes - Completado. Procesados: 1
+2026-09-24 10:14:54 - proceso_completo - Proceso completado exitosamente
+2026-09-24 10:34:54 - proceso_completo - Iniciando proceso - 1 documentos
+2026-09-24 10:34:54 - procesar_documentos_pendientes - Total de PDFs: 1
+2026-09-24 10:35:18 - analisis_ocr - Folio extraído: 14072
+2026-09-24 10:35:18 - enviar_a_destino - Enviados a C:\Users\marrano\Desktop\Convatec\SubirComidor: GD_14072.pdf y .xml
+2026-09-24 10:35:18 - enviar_a_destino - Enviados a C:\Users\marrano\Desktop\SubirComidor: GD_14072.pdf y .xml
+2026-09-24 10:35:18 - enviar_a_destino - Enviados a C:\Users\marrano\Desktop\Desarrollo\convatec_version_2\Ocr_convatec\SubirComidor: GD_14072.pdf y .xml
+2026-09-24 10:35:19 - procesar_documentos_pendientes - Completado. Procesados: 1
+2026-09-24 10:35:19 - proceso_completo - Proceso completado exitosamente
+2026-09-24 10:50:19 - proceso_completo - Iniciando proceso - 1 documentos
+2026-09-24 10:50:19 - procesar_documentos_pendientes - Total de PDFs: 1
+2026-09-24 10:50:43 - analisis_ocr - Folio extraído: 14072
+2026-09-24 10:50:43 - enviar_a_destino - Enviados a C:\Users\marrano\Desktop\Convatec\SubirComidor: GD_14072.pdf y .xml
+2026-09-24 10:50:43 - enviar_a_destino - Enviados a C:\Users\marrano\Desktop\SubirComidor: GD_14072.pdf y .xml
+2026-09-24 10:50:43 - enviar_a_destino - Enviados a C:\Users\marrano\Desktop\Desarrollo\convatec_version_2\Ocr_convatec\SubirComidor: GD_14072.pdf y .xml
+2026-09-24 10:50:44 - procesar_documentos_pendientes - Completado. Procesados: 1
+2026-09-24 10:50:44 - proceso_completo - Proceso completado exitosamente
+2026-09-24 11:06:19 - main - ========== PROGRAMA INICIADO ==========
+2026-09-24 11:06:19 - main - Ejecución única activada (--once)
+2026-09-24 11:07:08 - main - ========== PROGRAMA INICIADO ==========
+2026-09-24 11:07:08 - main - Horario: 24 horas al día, 7 días a la semana
+2026-09-24 11:07:08 - main - Intervalo: cada 5 minutos
+2026-09-24 11:07:08 - main - Timeout automático: 30 minutos
+2026-09-24 11:12:08 - proceso_completo - Iniciando proceso - 1 documentos
+2026-09-24 11:12:08 - procesar_documentos_pendientes - Total de PDFs: 1
+2026-09-24 11:12:27 - analisis_ocr - Folio extraído: 91355
+2026-09-24 11:12:27 - enviar_a_destino - Archivos FAC_91355 colocados en SubirComidor (C:\Users\marrano\Desktop\Convatec\SubirComidor)
+2026-09-24 11:12:28 - procesar_documentos_pendientes - Eliminado de carpeta emisora: FAC_91355.pdf
+2026-09-24 11:12:28 - procesar_documentos_pendientes - Completado. Procesados: 1
+2026-09-24 11:12:28 - proceso_completo - Proceso OCR completado exitosamente. Ejecutando Robot Comidor como último paso...
+2026-09-24 11:12:28 - robot_comidor - Lanzando Robot Comidor vía acceso directo: C:\Users\marrano\Desktop\Desarrollo\convatec_version_2\Ocr_convatec\Comidor\Robot carga de documentos Comidor.lnk
+2026-09-24 11:15:51 - main - ========== PROGRAMA INICIADO ==========
+2026-09-24 11:15:51 - main - Ejecución única activada (--once)
+2026-09-24 11:16:18 - main - ========== PROGRAMA INICIADO ==========
+2026-09-24 11:16:18 - main - Horario: 24 horas al día, 7 días a la semana
+2026-09-24 11:16:18 - main - Intervalo: cada 5 minutos
+2026-09-24 11:16:18 - main - Timeout automático: 30 minutos
+2026-09-24 11:26:18 - proceso_completo - Iniciando proceso - 1 documentos
+2026-09-24 11:26:18 - procesar_documentos_pendientes - Total de PDFs: 1
+2026-09-24 11:26:34 - analisis_ocr - Folio extraído: 98669
+2026-09-24 11:26:34 - enviar_a_destino - Archivos FAC_98669 colocados en SubirComidor (C:\Users\marrano\Desktop\Convatec\SubirComidor)
+2026-09-24 11:26:36 - procesar_documentos_pendientes - Eliminado de carpeta emisora: FAC_98669.pdf
+2026-09-24 11:26:36 - procesar_documentos_pendientes - Completado. Procesados: 1
+2026-09-24 11:26:36 - proceso_completo - Proceso OCR completado exitosamente. Ejecutando Robot Comidor como último paso...
+2026-09-24 11:26:36 - robot_comidor - Lanzando Robot Comidor de forma silenciosa en segundo plano...
+2026-09-24 11:26:36 - robot_comidor - Robot Comidor ejecutándose en segundo plano (sin ventana de consola).
+2026-09-24 11:45:21 - main - ========== PROGRAMA INICIADO ==========
+2026-09-24 11:45:21 - main - Horario: 24 horas al día, 7 días a la semana
+2026-09-24 11:45:21 - main - Intervalo: cada 5 minutos
+2026-09-24 11:45:21 - main - Timeout automático: 30 minutos

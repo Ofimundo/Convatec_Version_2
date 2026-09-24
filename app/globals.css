@@ -1,0 +1,73 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --color-ofilab-pink: #E53987;
+  --color-ofilab-magenta: #D9267C;
+  --color-ofilab-purple: #7B2CBF;
+  --color-ofilab-violet: #9333EA;
+  --color-bg-light: #F8FAFC;
+  --color-card-light: #FFFFFF;
+}
+
+body {
+  background-color: #F8FAFC;
+  color: #0F172A;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(229, 57, 135, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(229, 57, 135, 0.6);
+}
+
+/* Glassmorphism Utilities Light Theme */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(229, 57, 135, 0.15);
+  box-shadow: 0 10px 30px -10px rgba(123, 44, 191, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-hover:hover {
+  border-color: rgba(229, 57, 135, 0.4);
+  box-shadow: 0 15px 35px -10px rgba(229, 57, 135, 0.15);
+  transform: translateY(-2px);
+}
+
+.glow-magenta {
+  box-shadow: 0 0 25px -5px rgba(229, 57, 135, 0.25);
+}
+
+.glow-purple {
+  box-shadow: 0 0 25px -5px rgba(123, 44, 191, 0.25);
+}
+
+/* Animated Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, #E53987 0%, #B5179E 40%, #7B2CBF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
