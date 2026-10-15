@@ -1,7 +1,7 @@
 {
-  "isAutoActive": false,
+  "isAutoActive": true,
   "intervalMinutes": 5,
-  "lastRun": "2026-04-09 11:03:36",
-  "lastAction": "Detención automática solicitada por usuario",
-  "statusText": "DETENIDO (Modo Manual)"
+  "lastRun": "2026-09-28 19:18:50",
+  "lastAction": "Activación automática solicitada por usuario",
+  "statusText": "AUTOMÁTICO ACTIVO 24/7 (Cada 5 min)"
 }

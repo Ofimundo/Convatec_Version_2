@@ -47,14 +47,20 @@ export function SettingsModal({ isOpen, onClose }: SettingsModalProps) {
     setPaths((prev) => ({ ...prev, [field]: value }));
   };
 
-  const handleResetDefaults = () => {
-    setPaths({
-      rutaPendientes: 'C:\\Users\\marrano\\Desktop\\Desarrollo\\convatec_version_2\\Ocr_convatec\\doc_pendientes',
-      rutaProcesados: 'C:\\Users\\marrano\\Desktop\\Desarrollo\\convatec_version_2\\Ocr_convatec\\doc_procesados',
-      rutaSubirComidor: 'C:\\Users\\marrano\\Desktop\\SubirComidor',
-      rutaDocumentosComidor: 'C:\\Users\\marrano\\Desktop\\DocumentosComidor',
-    });
-    setMessage({ type: 'success', text: 'Valores restablecidos a las rutas recomendadas por defecto.' });
+  const handleResetDefaults = async () => {
+    try {
+      setLoading(true);
+      const res = await fetch('/api/settings?defaults=true');
+      const data = await res.json();
+      if (data.success && data.paths) {
+        setPaths(data.paths);
+        setMessage({ type: 'success', text: 'Valores restablecidos a las rutas automáticas de esta PC.' });
+      }
+    } catch (err) {
+      console.error('Error restableciendo rutas:', err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {

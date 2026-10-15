@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
+import os from 'os';
+
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 export const runtime = 'nodejs';
@@ -16,16 +18,34 @@ export interface SystemPaths {
   rutaDocumentosComidor: string;
 }
 
-function getDefaultPaths(): SystemPaths {
-  const isWin = process.platform === 'win32';
-  const homeDir = process.env.USERPROFILE || process.env.HOME || 'C:\\Users\\marrano';
+export function expandEnvVars(str: string): string {
+  if (!str) return '';
+  return str.replace(/%([^%]+)%/g, (_, n) => process.env[n] || _);
+}
+
+export function getDefaultPaths(): SystemPaths {
+  const homeDir = process.env.USERPROFILE || process.env.HOME || os.homedir();
+  const convatecDir = path.join(homeDir, 'Desktop', 'Convatec');
 
   return {
-    rutaPendientes: path.join(process.cwd(), 'doc_pendientes'),
-    rutaProcesados: path.join(process.cwd(), 'doc_procesados'),
-    rutaSubirComidor: path.join(homeDir, 'Desktop', 'SubirComidor'),
-    rutaDocumentosComidor: path.join(homeDir, 'Desktop', 'DocumentosComidor'),
+    rutaPendientes: path.join(convatecDir, 'Pendientes'),
+    rutaProcesados: path.join(convatecDir, 'Procesados'),
+    rutaSubirComidor: path.join(convatecDir, 'SubirComidor'),
+    rutaDocumentosComidor: path.join(convatecDir, 'DocumentosComidor'),
   };
+}
+
+export function ensureDirectoriesExist(paths: SystemPaths) {
+  Object.values(paths).forEach((dirPath) => {
+    try {
+      const expanded = expandEnvVars(dirPath);
+      if (expanded && !fs.existsSync(expanded)) {
+        fs.mkdirSync(expanded, { recursive: true });
+      }
+    } catch (e) {
+      console.warn(`No se pudo crear carpeta ${dirPath}:`, e);
+    }
+  });
 }
 
 function getSavedPaths(): SystemPaths {
@@ -34,21 +54,43 @@ function getSavedPaths(): SystemPaths {
     try {
       const content = fs.readFileSync(CONFIG_FILE, 'utf-8');
       const data = JSON.parse(content);
-      return {
-        rutaPendientes: data.rutaPendientes || defaults.rutaPendientes,
-        rutaProcesados: data.rutaProcesados || defaults.rutaProcesados,
-        rutaSubirComidor: data.rutaSubirComidor || defaults.rutaSubirComidor,
-        rutaDocumentosComidor: data.rutaDocumentosComidor || defaults.rutaDocumentosComidor,
+      
+      const loaded: SystemPaths = {
+        rutaPendientes: expandEnvVars(data.rutaPendientes) || defaults.rutaPendientes,
+        rutaProcesados: expandEnvVars(data.rutaProcesados) || defaults.rutaProcesados,
+        rutaSubirComidor: expandEnvVars(data.rutaSubirComidor) || defaults.rutaSubirComidor,
+        rutaDocumentosComidor: expandEnvVars(data.rutaDocumentosComidor) || defaults.rutaDocumentosComidor,
       };
+
+      // Si las rutas guardadas apuntaban a un usuario que no existe en esta máquina,
+      // cambiar automáticamente a las rutas de la máquina actual
+      const currentHome = process.env.USERPROFILE || os.homedir();
+      const needsMigration = Object.values(loaded).some(p => {
+        const lower = p.toLowerCase();
+        return lower.includes('c:\\users\\') && !lower.startsWith(currentHome.toLowerCase()) && !fs.existsSync(p);
+      });
+
+      const finalPaths = needsMigration ? defaults : loaded;
+      ensureDirectoriesExist(finalPaths);
+      return finalPaths;
     } catch (e) {
       console.error('Error reading config_rutas.json:', e);
     }
   }
+
+  ensureDirectoriesExist(defaults);
   return defaults;
 }
 
-export async function GET() {
+export async function GET(req: Request) {
   try {
+    const { searchParams } = new URL(req.url);
+    if (searchParams.get('defaults') === 'true') {
+      const defaults = getDefaultPaths();
+      ensureDirectoriesExist(defaults);
+      return NextResponse.json({ success: true, paths: defaults });
+    }
+
     const paths = getSavedPaths();
     return NextResponse.json({ success: true, paths });
   } catch (error: any) {
@@ -66,25 +108,17 @@ export async function POST(req: Request) {
     }
 
     const newPaths: SystemPaths = {
-      rutaPendientes: rutaPendientes.trim(),
-      rutaProcesados: rutaProcesados.trim(),
-      rutaSubirComidor: rutaSubirComidor.trim(),
-      rutaDocumentosComidor: rutaDocumentosComidor.trim(),
+      rutaPendientes: expandEnvVars(rutaPendientes.trim()),
+      rutaProcesados: expandEnvVars(rutaProcesados.trim()),
+      rutaSubirComidor: expandEnvVars(rutaSubirComidor.trim()),
+      rutaDocumentosComidor: expandEnvVars(rutaDocumentosComidor.trim()),
     };
 
     // 1. Guardar en config_rutas.json
     fs.writeFileSync(CONFIG_FILE, JSON.stringify(newPaths, null, 2), 'utf-8');
 
     // 2. Asegurar que las carpetas existan en disco
-    Object.values(newPaths).forEach((dirPath) => {
-      try {
-        if (!fs.existsSync(dirPath)) {
-          fs.mkdirSync(dirPath, { recursive: true });
-        }
-      } catch (e) {
-        console.warn(`No se pudo crear carpeta ${dirPath}:`, e);
-      }
-    });
+    ensureDirectoriesExist(newPaths);
 
     // 3. Actualizar Comidor/Processwatchandrun/application.properties
     if (fs.existsSync(PROPS_FILE)) {
@@ -106,7 +140,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json({
       success: true,
-      message: 'Rutas configuradas correctamente y sincronizadas con el Robot de Comidor',
+      message: 'Rutas configuradas correctamente y carpetas creadas en disco',
       paths: newPaths,
     });
   } catch (error: any) {

@@ -138,7 +138,7 @@ function parseToYYYYMMDD(dateStr: string): string {
           {/* User & Actions */}
           <div className="flex items-center space-x-3">
             <button
-              onClick={fetchDocuments}
+              onClick={() => fetchDocuments()}
               className="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-700 hover:text-slate-900 transition-all"
               title="Actualizar lista de documentos"
             >

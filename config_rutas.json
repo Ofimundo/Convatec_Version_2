@@ -1,6 +1,6 @@
 {
-  "rutaPendientes": "C:\\Users\\marrano\\Desktop\\Convatec\\Pendientes",
-  "rutaProcesados": "C:\\Users\\marrano\\Desktop\\Convatec\\Procesados",
-  "rutaSubirComidor": "C:\\Users\\marrano\\Desktop\\Convatec\\SubirComidor",
-  "rutaDocumentosComidor": "C:\\Users\\marrano\\Desktop\\Convatec\\DocumentosComidor"
+  "rutaPendientes": "%USERPROFILE%\\Desktop\\Convatec\\Pendientes",
+  "rutaProcesados": "%USERPROFILE%\\Desktop\\Convatec\\Procesados",
+  "rutaSubirComidor": "%USERPROFILE%\\Desktop\\Convatec\\SubirComidor",
+  "rutaDocumentosComidor": "%USERPROFILE%\\Desktop\\Convatec\\DocumentosComidor"
 }

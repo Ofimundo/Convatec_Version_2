@@ -1,6 +1,17 @@
 import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
+import os from 'os';
+
+function expandEnv(str: string): string {
+  if (!str) return '';
+  return str.replace(/%([^%]+)%/g, (_, n) => process.env[n] || _);
+}
+
+function getBaseConvatecDir(): string {
+  const homeDir = process.env.USERPROFILE || process.env.HOME || os.homedir();
+  return path.join(homeDir, 'Desktop', 'Convatec');
+}
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -31,9 +42,10 @@ function getPendingDocsCount(): number {
   let count = 0;
   try {
     const checkedPaths = new Set<string>();
+    const convatecDir = getBaseConvatecDir();
     const defaultPaths = [
-      path.join(process.cwd(), 'doc_pendientes'),
-      'C:\\Users\\marrano\\Desktop\\Convatec\\Pendientes'
+      path.join(convatecDir, 'Pendientes'),
+      path.join(process.cwd(), 'doc_pendientes')
     ];
 
     const configPath = path.join(process.cwd(), 'config_rutas.json');
@@ -41,7 +53,7 @@ function getPendingDocsCount(): number {
       try {
         const cfg = JSON.parse(fs.readFileSync(configPath, 'utf-8'));
         if (cfg.rutaPendientes) {
-          defaultPaths.unshift(cfg.rutaPendientes);
+          defaultPaths.unshift(expandEnv(cfg.rutaPendientes));
         }
       } catch (e) {}
     }
@@ -91,14 +103,19 @@ function getPrefixByDocType(docType: string): string {
 export async function GET() {
   try {
     const configPath = path.join(process.cwd(), 'config_rutas.json');
-    let rutaDocumentosComidor = 'C:\\Users\\marrano\\Desktop\\Convatec\\DocumentosComidor';
-    let rutaSubirComidor = 'C:\\Users\\marrano\\Desktop\\Convatec\\SubirComidor';
+    const convatecDir = getBaseConvatecDir();
+    let rutaDocumentosComidor = path.join(convatecDir, 'DocumentosComidor');
+    let rutaSubirComidor = path.join(convatecDir, 'SubirComidor');
+    let rutaPendientes = path.join(convatecDir, 'Pendientes');
+    let rutaProcesados = path.join(convatecDir, 'Procesados');
 
     if (fs.existsSync(configPath)) {
       try {
         const cfg = JSON.parse(fs.readFileSync(configPath, 'utf-8'));
-        if (cfg.rutaDocumentosComidor) rutaDocumentosComidor = cfg.rutaDocumentosComidor;
-        if (cfg.rutaSubirComidor) rutaSubirComidor = cfg.rutaSubirComidor;
+        if (cfg.rutaDocumentosComidor) rutaDocumentosComidor = expandEnv(cfg.rutaDocumentosComidor);
+        if (cfg.rutaSubirComidor) rutaSubirComidor = expandEnv(cfg.rutaSubirComidor);
+        if (cfg.rutaPendientes) rutaPendientes = expandEnv(cfg.rutaPendientes);
+        if (cfg.rutaProcesados) rutaProcesados = expandEnv(cfg.rutaProcesados);
       } catch (e) {}
     }
 
@@ -385,7 +402,47 @@ export async function GET() {
       }
     }
 
-    // Filter out deleted documents
+    // Escanear carpetas de pendientes para incluir documentos en proceso en la lista inmediatamente
+    const pendingDirs = [
+      rutaPendientes,
+      path.join(process.cwd(), 'doc_pendientes')
+    ];
+
+    for (const pDir of pendingDirs) {
+      if (fs.existsSync(pDir)) {
+        try {
+          const files = fs.readdirSync(pDir).filter(f => f.toLowerCase().endsWith('.pdf'));
+          for (const f of files) {
+            const prefijo = f.toUpperCase().startsWith('FAC') ? 'FAC' : (f.toUpperCase().startsWith('GD') ? 'GD' : 'DOC');
+            const stat = fs.statSync(path.join(pDir, f));
+            const mtimeStr = stat.mtime.toISOString().replace('T', ' ').substring(0, 19);
+
+            documents.unshift({
+              id: `pending_${f}`,
+              nombreOriginal: f,
+              nombreFinalPdf: `${prefijo}_Procesando.pdf`,
+              nombreFinalXml: `${prefijo}_Procesando.xml`,
+              prefijo,
+              tipoDocumento: 'PROCESANDO DOCUMENTO...',
+              folio: 'EN CURSO',
+              fechaProcesamiento: mtimeStr,
+              rutEmisor: 'Analizando OCR...',
+              rutReceptor: 'Analizando OCR...',
+              total: 'Procesando...',
+              ordenCompra: 'Procesando...',
+              estado: 'Advertencia',
+              confianza: 50,
+              entitiesCount: 0,
+              jsonPath: '',
+              entities: [],
+              subidoComidor: false
+            });
+          }
+        } catch (e) {}
+      }
+    }
+
+    // Filter out deleted documents, but keep documents that currently exist as JSONs in jsons/
     const deletedFile = path.join(process.cwd(), 'deleted_docs.json');
     let deletedIds: string[] = [];
     if (fs.existsSync(deletedFile)) {
@@ -394,7 +451,12 @@ export async function GET() {
       } catch (e) {}
     }
 
-    const activeDocuments = documents.filter(d => !deletedIds.includes(d.id));
+    const activeDocuments = documents.filter(d => {
+      if (d.jsonPath && fs.existsSync(path.join(jsonsDir, d.jsonPath))) {
+        return true;
+      }
+      return !deletedIds.includes(d.id);
+    });
 
     // Sort by fechaProcesamiento descending
     activeDocuments.sort((a, b) => new Date(b.fechaProcesamiento).getTime() - new Date(a.fechaProcesamiento).getTime());

@@ -23,9 +23,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # ==================== CONFIGURACIÓN ====================
-RUTA_DESTINO = os.getenv("RUTA_DESTINO", r"C:\Users\CVT_Admin\Desktop\SubirComidor")
+RUTA_DESTINO = os.getenv("RUTA_DESTINO", os.path.join(os.environ.get('USERPROFILE') or os.path.expanduser('~'), 'Desktop', 'Convatec', 'SubirComidor'))
 INTERVALO_MINUTOS = 5
-MAX_REINTENTOS = 3
+MAX_REINTENTOS = 1
 TIMEOUT_PROCESO = 1800  # 30 minutos timeout para procesos colgados
 ARCHIVO_PROCESO = os.path.join(os.getcwd(), "proceso.txt")
 
@@ -168,20 +168,53 @@ def obtener_prefijo_por_tipo(tipo_documento: str) -> str:
     else:
         return "DOC"
 
+def obtener_rutas_base_convatec() -> dict:
+    home_dir = os.environ.get('USERPROFILE') or os.path.expanduser('~')
+    convatec_dir = os.path.join(home_dir, 'Desktop', 'Convatec')
+    return {
+        "rutaPendientes": os.path.join(convatec_dir, "Pendientes"),
+        "rutaProcesados": os.path.join(convatec_dir, "Procesados"),
+        "rutaSubirComidor": os.path.join(convatec_dir, "SubirComidor"),
+        "rutaDocumentosComidor": os.path.join(convatec_dir, "DocumentosComidor"),
+    }
+
+def asegurar_carpetas_convatec(rutas: dict = None) -> None:
+    if rutas is None:
+        rutas = obtener_rutas_base_convatec()
+    for nombre, r in rutas.items():
+        if r:
+            try:
+                ruta_exp = os.path.expandvars(r)
+                os.makedirs(ruta_exp, exist_ok=True)
+            except Exception as e:
+                registro_log("asegurar_carpetas", f"Error creando carpeta {r}: {e}")
+
 def cargar_configuracion_rutas():
+    base = obtener_rutas_base_convatec()
+    asegurar_carpetas_convatec(base)
     config_file = os.path.join(os.getcwd(), "config_rutas.json")
     if os.path.exists(config_file):
         try:
             with open(config_file, 'r', encoding='utf-8') as f:
-                return json.load(f)
+                data = json.load(f)
+                res = {}
+                for k in ["rutaPendientes", "rutaProcesados", "rutaSubirComidor", "rutaDocumentosComidor"]:
+                    val = data.get(k)
+                    res[k] = os.path.expandvars(val) if val else base[k]
+                asegurar_carpetas_convatec(res)
+                return res
         except Exception as e:
             print(f"Error cargando config_rutas.json: {e}")
-    return {}
+    return base
 
 def obtener_rutas_salida_comidor() -> tuple:
+    base = obtener_rutas_base_convatec()
     config = cargar_configuracion_rutas()
-    ruta_subir = config.get("rutaSubirComidor") or r"C:\Users\marrano\Desktop\Convatec\SubirComidor"
-    ruta_doc = config.get("rutaDocumentosComidor") or r"C:\Users\marrano\Desktop\Convatec\DocumentosComidor"
+    ruta_subir = config.get("rutaSubirComidor") or base["rutaSubirComidor"]
+    ruta_doc = config.get("rutaDocumentosComidor") or base["rutaDocumentosComidor"]
+    
+    ruta_subir = os.path.expandvars(ruta_subir)
+    ruta_doc = os.path.expandvars(ruta_doc)
     
     try:
         os.makedirs(ruta_subir, exist_ok=True)
@@ -196,11 +229,20 @@ def enviar_a_destino_final(origen_pdf: str, origen_xml: str, folio: str, tipo_do
         prefijo = obtener_prefijo_por_tipo(tipo_documento)
         nombre_con_prefijo = f"{prefijo}_{folio}"
         
+        pdf_destino = os.path.join(ruta_subir, f"{nombre_con_prefijo}.pdf")
+        xml_destino = os.path.join(ruta_subir, f"{nombre_con_prefijo}.xml")
+        pdf_en_doc = os.path.join(ruta_doc, f"{nombre_con_prefijo}.pdf")
+        
+        # Prevenir subidas duplicadas si los archivos ya existen en SubirComidor o DocumentosComidor
+        if (os.path.exists(pdf_destino) and os.path.exists(xml_destino)) or os.path.exists(pdf_en_doc):
+            registro_log("enviar_a_destino", f"Archivos {nombre_con_prefijo} ya se encuentran en SubirComidor o DocumentosComidor. Omitiendo subida duplicada.")
+            return
+
         # Colocar únicamente en SubirComidor para que el Robot Comidor lo tome, lo suba y lo mueva a DocumentosComidor
         if os.path.exists(origen_pdf):
-            shutil.copy2(origen_pdf, os.path.join(ruta_subir, f"{nombre_con_prefijo}.pdf"))
+            shutil.copy2(origen_pdf, pdf_destino)
         if os.path.exists(origen_xml):
-            shutil.copy2(origen_xml, os.path.join(ruta_subir, f"{nombre_con_prefijo}.xml"))
+            shutil.copy2(origen_xml, xml_destino)
             
         registro_log("enviar_a_destino", f"Archivos {nombre_con_prefijo} colocados en SubirComidor ({ruta_subir})")
     except Exception as e:
@@ -224,28 +266,23 @@ def analisis_ocr(file_path: str, numero_pagina: int, ruta: str, nombre_archivo: 
         ruta_proyecto = os.getcwd()
         ruta_imagen_pdf = transformar_pdf_a_imagen(file_path, numero_pagina)
         
-        os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = os.path.join(ruta_proyecto, "credentials.json")
-        
-        project_id = os.getenv("OCR_PROJECT_ID")
-        processor_id = os.getenv("OCR_PROCESSOR_ID")
-        mime_type = os.getenv("OCR_MIME_TYPE")
-        location = os.getenv("OCR_LOCATION")
-        
-        opts = ClientOptions(api_endpoint=f"{location}-documentai.googleapis.com")
-        client = documentai.DocumentProcessorServiceClient(client_options=opts)
-        name = client.processor_path(project_id, location, processor_id)
-        
-        with open(file_path, "rb") as image:
-            image_content = image.read()
-        
-        raw_document = documentai.RawDocument(content=image_content, mime_type=mime_type)
-        request = documentai.ProcessRequest(name=name, raw_document=raw_document)
-        result = client.process_document(request=request)
-        formato = MessageToDict(result.document._pb)
+        from local_ocr import procesar_documento_local
+        formato = procesar_documento_local(file_path, numero_pagina)
         
         folio = buscar_datos_ocr(formato.get('entities', []), 'id_folio')
         if not folio:
-            folio = f"SIN_FOLIO_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+            clean_name = os.path.basename(nombre_archivo or file_path)
+            m_f = re.search(r'(\d{3,10})', clean_name)
+            if m_f:
+                folio = m_f.group(1)
+            else:
+                safe_name = re.sub(r'[^A-Za-z0-9]', '_', clean_name)
+                folio = f"SIN_FOLIO_{safe_name}"
+        
+        # Omitir si este folio ya fue procesado en este lote
+        if any(p.get('folio') == folio for p in arreglo_procesados):
+            registro_log("analisis_ocr", f"Folio {folio} ya fue procesado en esta tanda. Omitiendo subida duplicada.")
+            return None
         
         registro_log("analisis_ocr", f"Folio extraído: {folio}")
         
@@ -272,7 +309,10 @@ def analisis_ocr(file_path: str, numero_pagina: int, ruta: str, nombre_archivo: 
             json.dump(datos_json, f, ensure_ascii=False, indent=2)
         
         # Preparar carpetas
-        doc_procesados_path = os.path.join(ruta_proyecto, "doc_procesados")
+        config = cargar_configuracion_rutas()
+        base = obtener_rutas_base_convatec()
+        doc_procesados_path = config.get("rutaProcesados") or base["rutaProcesados"]
+        doc_procesados_path = os.path.expandvars(doc_procesados_path)
         os.makedirs(doc_procesados_path, exist_ok=True)
         carpeta_folio = os.path.join(doc_procesados_path, folio)
         os.makedirs(carpeta_folio, exist_ok=True)
@@ -355,7 +395,9 @@ def separar_documentos(documento) -> list:
 def analizar_documento(documento, ruta, archivo, arreglo_procesados, pdf_original_temp):
     listado_documentos = separar_documentos(documento)
     for numero_pagina, doc in enumerate(listado_documentos, 1):
-        analisis_ocr(doc, numero_pagina, ruta, archivo, arreglo_procesados, pdf_original_temp)
+        resultado = analisis_ocr(doc, numero_pagina, ruta, archivo, arreglo_procesados, pdf_original_temp)
+        if isinstance(resultado, Exception):
+            raise resultado
     time.sleep(1)
     carpeta_temp = os.path.dirname(documento)
     if carpeta_temp and carpeta_temp != os.getcwd() and "temp_procesamiento" in carpeta_temp:
@@ -392,7 +434,7 @@ def cargar_documento(archivo) -> tuple:
         return (ruta_archivo_proc, carpeta_temp, nombre_base)
     return (None, None, None)
 
-def procesar_documentos_pendientes(ruta_local) -> None:
+def procesar_documentos_pendientes(ruta_local, archivos_procesados: list = None) -> None:
     if not os.path.exists(ruta_local):
         registro_log("procesar_documentos_pendientes", f"La ruta no existe: {ruta_local}")
         return
@@ -403,7 +445,8 @@ def procesar_documentos_pendientes(ruta_local) -> None:
         return
     
     registro_log("procesar_documentos_pendientes", f"Total de PDFs: {len(archivos_pdf)}")
-    archivos_procesados = []
+    if archivos_procesados is None:
+        archivos_procesados = []
     
     for idx, archivo in enumerate(archivos_pdf, 1):
         ruta_archivo = os.path.join(ruta_local, archivo)
@@ -417,18 +460,19 @@ def procesar_documentos_pendientes(ruta_local) -> None:
             gc.collect()
             time.sleep(0.5)
 
-            # Eliminar de la carpeta emisora (Pendientes)
-            if os.path.exists(ruta_archivo):
-                try:
-                    os.remove(ruta_archivo)
-                    registro_log("procesar_documentos_pendientes", f"Eliminado de carpeta emisora: {archivo}")
-                except Exception as rem_err:
-                    time.sleep(1)
+            # Eliminar de la carpeta emisora (Pendientes) y de cualquier otra carpeta pendiente duplicada
+            for p_dir in obtener_todas_rutas_pendientes():
+                dup_path = os.path.join(p_dir, archivo)
+                if os.path.exists(dup_path):
                     try:
-                        os.remove(ruta_archivo)
-                        registro_log("procesar_documentos_pendientes", f"Eliminado en reintento: {archivo}")
-                    except Exception as rem_err2:
-                        registro_log("procesar_documentos_pendientes", f"Error eliminando de carpeta emisora {archivo}: {rem_err2}")
+                        os.remove(dup_path)
+                        registro_log("procesar_documentos_pendientes", f"Eliminado de carpeta pendiente: {dup_path}")
+                    except Exception as rem_err:
+                        try:
+                            time.sleep(0.5)
+                            os.remove(dup_path)
+                        except Exception:
+                            pass
         except Exception as e:
             registro_log("procesar_documentos_pendientes", f"Error: {e}")
             continue
@@ -460,7 +504,6 @@ def hay_proceso_activo():
             with open(ARCHIVO_PROCESO, 'r', encoding='utf-8') as file:
                 content = file.read().strip()
                 if content == "TRUE":
-                    # Verificar si el archivo tiene más de TIMEOUT_PROCESO segundos
                     tiempo_modificacion = os.path.getmtime(ARCHIVO_PROCESO)
                     tiempo_actual = time.time()
                     if tiempo_actual - tiempo_modificacion > TIMEOUT_PROCESO:
@@ -474,25 +517,30 @@ def hay_proceso_activo():
     return False
 
 def obtener_todas_rutas_pendientes() -> list:
+    base = obtener_rutas_base_convatec()
+    asegurar_carpetas_convatec(base)
+    
     config = cargar_configuracion_rutas()
     rutas = []
     r_config = config.get("rutaPendientes")
     if r_config:
-        rutas.append(r_config)
+        rutas.append(os.path.expandvars(r_config))
     
     defaults = [
-        os.path.join(os.getcwd(), "doc_pendientes"),
-        r"C:\Users\marrano\Desktop\Convatec\Pendientes",
-        r"C:\Users\marrano\Desktop\Pendientes"
+        base["rutaPendientes"],
+        os.path.join(os.getcwd(), "doc_pendientes")
     ]
     for d in defaults:
-        if d not in rutas:
-            rutas.append(d)
+        rutas.append(d)
             
     validas = []
+    vistas = set()
     for r in rutas:
         if os.path.exists(r):
-            validas.append(r)
+            norm = os.path.normpath(r).lower()
+            if norm not in vistas:
+                vistas.add(norm)
+                validas.append(r)
     return validas
 
 def lanzar_robot_comidor():
@@ -504,6 +552,22 @@ def lanzar_robot_comidor():
 
         exe = javaw_exe if os.path.exists(javaw_exe) else java_exe
         
+        # Sincronizar application.properties con las rutas actuales
+        ruta_subir, ruta_doc = obtener_rutas_salida_comidor()
+        props_file = os.path.join(working_dir, "application.properties")
+        if os.path.exists(props_file):
+            try:
+                with open(props_file, 'r', encoding='utf-8') as pf:
+                    p_text = pf.read()
+                s_fmt = ruta_subir.replace('/', '\\')
+                t_fmt = ruta_doc.replace('/', '\\')
+                p_text = re.sub(r'^sourceDir\s*=.*$', f'sourceDir = {s_fmt}', p_text, flags=re.MULTILINE)
+                p_text = re.sub(r'^targetDir\s*=.*$', f'targetDir = {t_fmt}', p_text, flags=re.MULTILINE)
+                with open(props_file, 'w', encoding='utf-8') as pf:
+                    pf.write(p_text)
+            except Exception as pe:
+                registro_log("robot_comidor", f"Advertencia actualizando application.properties: {pe}")
+
         if os.path.exists(exe) and os.path.exists(jar_file):
             registro_log("robot_comidor", "Lanzando Robot Comidor de forma silenciosa en segundo plano...")
             cmd = [exe, "-jar", "processwatchandrun-1.0.jar", "Server"]
@@ -545,9 +609,10 @@ def ejecutar_proceso_completo():
         
     registro_log("proceso_completo", f"Iniciando proceso - {total_pdfs} documentos")
     try:
+        archivos_procesados_lote = []
         for r in rutas_pendientes:
             if contar_pdfs_en_carpeta(r) > 0:
-                procesar_documentos_pendientes(r)
+                procesar_documentos_pendientes(r, archivos_procesados_lote)
                 
         registro_log("proceso_completo", "Proceso OCR completado exitosamente. Ejecutando Robot Comidor como último paso...")
         lanzar_robot_comidor()
@@ -589,6 +654,7 @@ def ejecucion_programada():
 
 def main():
     registro_log("main", "========== PROGRAMA INICIADO ==========")
+    asegurar_carpetas_convatec()
 
     if "--once" in sys.argv or "-o" in sys.argv:
         registro_log("main", "Ejecución única activada (--once)")
@@ -599,10 +665,12 @@ def main():
     registro_log("main", f"Intervalo: cada {INTERVALO_MINUTOS} minutos")
     registro_log("main", f"Timeout automático: {TIMEOUT_PROCESO // 60} minutos")
     
-    # Ejecutar inicial si hay documentos
-    if contar_pdfs_en_carpeta("doc_pendientes") > 0 and not hay_proceso_activo():
+    # Si hay archivos acumulados al iniciar, procesarlos de inmediato
+    rutas_pendientes = obtener_todas_rutas_pendientes()
+    if any(contar_pdfs_en_carpeta(r) > 0 for r in rutas_pendientes):
+        registro_log("main", "Documentos pendientes detectados al iniciar. Procesando tanda inicial...")
         ejecutar_con_reintentos()
-    
+
     schedule.every(INTERVALO_MINUTOS).minutes.do(ejecucion_programada)
     
     try:
